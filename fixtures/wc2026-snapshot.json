@@ -1,0 +1,4072 @@
+{
+  "standings": {
+    "groups": [
+      {
+        "group": "A",
+        "table": [
+          {
+            "position": 1,
+            "team": {
+              "abbr": "MEX",
+              "name": "Mexico",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+              "friendId": "dan",
+              "friendName": "Dan",
+              "friendColour": "#00843D"
+            },
+            "played": 2,
+            "won": 2,
+            "drawn": 0,
+            "lost": 0,
+            "goalsFor": 3,
+            "goalsAgainst": 0,
+            "goalDifference": 3,
+            "points": 6
+          },
+          {
+            "position": 2,
+            "team": {
+              "abbr": "KOR",
+              "name": "South Korea",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/kors.png",
+              "friendId": "tim",
+              "friendName": "Tim",
+              "friendColour": "#1565C0"
+            },
+            "played": 2,
+            "won": 1,
+            "drawn": 0,
+            "lost": 1,
+            "goalsFor": 2,
+            "goalsAgainst": 2,
+            "goalDifference": 0,
+            "points": 3
+          },
+          {
+            "position": 3,
+            "team": {
+              "abbr": "CZE",
+              "name": "Czechia",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
+              "friendId": "tim",
+              "friendName": "Tim",
+              "friendColour": "#1565C0"
+            },
+            "played": 2,
+            "won": 0,
+            "drawn": 1,
+            "lost": 1,
+            "goalsFor": 2,
+            "goalsAgainst": 3,
+            "goalDifference": -1,
+            "points": 1
+          },
+          {
+            "position": 4,
+            "team": {
+              "abbr": "RSA",
+              "name": "South Africa",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png",
+              "friendId": "boris",
+              "friendName": "Boris",
+              "friendColour": "#E6A817"
+            },
+            "played": 2,
+            "won": 0,
+            "drawn": 1,
+            "lost": 1,
+            "goalsFor": 1,
+            "goalsAgainst": 3,
+            "goalDifference": -2,
+            "points": 1
+          }
+        ]
+      },
+      {
+        "group": "B",
+        "table": [
+          {
+            "position": 1,
+            "team": {
+              "abbr": "CAN",
+              "name": "Canada",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
+              "friendId": "boomer",
+              "friendName": "Boomer",
+              "friendColour": "#E65100"
+            },
+            "played": 2,
+            "won": 1,
+            "drawn": 1,
+            "lost": 0,
+            "goalsFor": 7,
+            "goalsAgainst": 1,
+            "goalDifference": 6,
+            "points": 4
+          },
+          {
+            "position": 2,
+            "team": {
+              "abbr": "SUI",
+              "name": "Switzerland",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
+              "friendId": "rob",
+              "friendName": "Rob",
+              "friendColour": "#8E24AA"
+            },
+            "played": 2,
+            "won": 1,
+            "drawn": 1,
+            "lost": 0,
+            "goalsFor": 5,
+            "goalsAgainst": 2,
+            "goalDifference": 3,
+            "points": 4
+          },
+          {
+            "position": 3,
+            "team": {
+              "abbr": "BIH",
+              "name": "Bosnia-Herzegovina",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/bih.png",
+              "friendId": "dan",
+              "friendName": "Dan",
+              "friendColour": "#00843D"
+            },
+            "played": 2,
+            "won": 0,
+            "drawn": 1,
+            "lost": 1,
+            "goalsFor": 2,
+            "goalsAgainst": 5,
+            "goalDifference": -3,
+            "points": 1
+          },
+          {
+            "position": 4,
+            "team": {
+              "abbr": "QAT",
+              "name": "Qatar",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/qat.png",
+              "friendId": "boomer",
+              "friendName": "Boomer",
+              "friendColour": "#E65100"
+            },
+            "played": 2,
+            "won": 0,
+            "drawn": 1,
+            "lost": 1,
+            "goalsFor": 1,
+            "goalsAgainst": 7,
+            "goalDifference": -6,
+            "points": 1
+          }
+        ]
+      },
+      {
+        "group": "C",
+        "table": [
+          {
+            "position": 1,
+            "team": {
+              "abbr": "BRA",
+              "name": "Brazil",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+              "friendId": "dan",
+              "friendName": "Dan",
+              "friendColour": "#00843D"
+            },
+            "played": 2,
+            "won": 1,
+            "drawn": 1,
+            "lost": 0,
+            "goalsFor": 4,
+            "goalsAgainst": 1,
+            "goalDifference": 3,
+            "points": 4
+          },
+          {
+            "position": 2,
+            "team": {
+              "abbr": "MAR",
+              "name": "Morocco",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/mar.png",
+              "friendId": "ben",
+              "friendName": "Ben",
+              "friendColour": "#0097A7"
+            },
+            "played": 2,
+            "won": 1,
+            "drawn": 1,
+            "lost": 0,
+            "goalsFor": 2,
+            "goalsAgainst": 1,
+            "goalDifference": 1,
+            "points": 4
+          },
+          {
+            "position": 3,
+            "team": {
+              "abbr": "SCO",
+              "name": "Scotland",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sco.png",
+              "friendId": "tim",
+              "friendName": "Tim",
+              "friendColour": "#1565C0"
+            },
+            "played": 2,
+            "won": 1,
+            "drawn": 0,
+            "lost": 1,
+            "goalsFor": 1,
+            "goalsAgainst": 1,
+            "goalDifference": 0,
+            "points": 3
+          },
+          {
+            "position": 4,
+            "team": {
+              "abbr": "HAI",
+              "name": "Haiti",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/hai.png",
+              "friendId": "hamish",
+              "friendName": "Hamish",
+              "friendColour": "#C8102E"
+            },
+            "played": 2,
+            "won": 0,
+            "drawn": 0,
+            "lost": 2,
+            "goalsFor": 0,
+            "goalsAgainst": 4,
+            "goalDifference": -4,
+            "points": 0
+          }
+        ]
+      },
+      {
+        "group": "D",
+        "table": [
+          {
+            "position": 1,
+            "team": {
+              "abbr": "USA",
+              "name": "United States",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+              "friendId": "hamish",
+              "friendName": "Hamish",
+              "friendColour": "#C8102E"
+            },
+            "played": 2,
+            "won": 2,
+            "drawn": 0,
+            "lost": 0,
+            "goalsFor": 6,
+            "goalsAgainst": 1,
+            "goalDifference": 5,
+            "points": 6
+          },
+          {
+            "position": 2,
+            "team": {
+              "abbr": "AUS",
+              "name": "Australia",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
+              "friendId": "ben",
+              "friendName": "Ben",
+              "friendColour": "#0097A7"
+            },
+            "played": 2,
+            "won": 1,
+            "drawn": 0,
+            "lost": 1,
+            "goalsFor": 2,
+            "goalsAgainst": 2,
+            "goalDifference": 0,
+            "points": 3
+          },
+          {
+            "position": 3,
+            "team": {
+              "abbr": "PAR",
+              "name": "Paraguay",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
+              "friendId": "ben",
+              "friendName": "Ben",
+              "friendColour": "#0097A7"
+            },
+            "played": 2,
+            "won": 1,
+            "drawn": 0,
+            "lost": 1,
+            "goalsFor": 2,
+            "goalsAgainst": 4,
+            "goalDifference": -2,
+            "points": 3
+          },
+          {
+            "position": 4,
+            "team": {
+              "abbr": "TUR",
+              "name": "Türkiye",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/tur.png",
+              "friendId": "jake",
+              "friendName": "Jake",
+              "friendColour": "#455A64"
+            },
+            "played": 2,
+            "won": 0,
+            "drawn": 0,
+            "lost": 2,
+            "goalsFor": 0,
+            "goalsAgainst": 3,
+            "goalDifference": -3,
+            "points": 0
+          }
+        ]
+      },
+      {
+        "group": "E",
+        "table": [
+          {
+            "position": 1,
+            "team": {
+              "abbr": "GER",
+              "name": "Germany",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+              "friendId": "jake",
+              "friendName": "Jake",
+              "friendColour": "#455A64"
+            },
+            "played": 2,
+            "won": 2,
+            "drawn": 0,
+            "lost": 0,
+            "goalsFor": 9,
+            "goalsAgainst": 2,
+            "goalDifference": 7,
+            "points": 6
+          },
+          {
+            "position": 2,
+            "team": {
+              "abbr": "CIV",
+              "name": "Ivory Coast",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/civ.png",
+              "friendId": "jake",
+              "friendName": "Jake",
+              "friendColour": "#455A64"
+            },
+            "played": 2,
+            "won": 1,
+            "drawn": 0,
+            "lost": 1,
+            "goalsFor": 2,
+            "goalsAgainst": 2,
+            "goalDifference": 0,
+            "points": 3
+          },
+          {
+            "position": 3,
+            "team": {
+              "abbr": "ECU",
+              "name": "Ecuador",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png",
+              "friendId": "rob",
+              "friendName": "Rob",
+              "friendColour": "#8E24AA"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 0,
+            "lost": 1,
+            "goalsFor": 0,
+            "goalsAgainst": 1,
+            "goalDifference": -1,
+            "points": 0
+          },
+          {
+            "position": 4,
+            "team": {
+              "abbr": "CUW",
+              "name": "Curaçao",
+              "logo": "https://a.espncdn.com/i/teamlogos/soccer/500/11678.png",
+              "friendId": "jake",
+              "friendName": "Jake",
+              "friendColour": "#455A64"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 0,
+            "lost": 1,
+            "goalsFor": 1,
+            "goalsAgainst": 7,
+            "goalDifference": -6,
+            "points": 0
+          }
+        ]
+      },
+      {
+        "group": "F",
+        "table": [
+          {
+            "position": 1,
+            "team": {
+              "abbr": "NED",
+              "name": "Netherlands",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
+              "friendId": "rob",
+              "friendName": "Rob",
+              "friendColour": "#8E24AA"
+            },
+            "played": 2,
+            "won": 1,
+            "drawn": 1,
+            "lost": 0,
+            "goalsFor": 7,
+            "goalsAgainst": 3,
+            "goalDifference": 4,
+            "points": 4
+          },
+          {
+            "position": 2,
+            "team": {
+              "abbr": "SWE",
+              "name": "Sweden",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png",
+              "friendId": "hamish",
+              "friendName": "Hamish",
+              "friendColour": "#C8102E"
+            },
+            "played": 2,
+            "won": 1,
+            "drawn": 0,
+            "lost": 1,
+            "goalsFor": 6,
+            "goalsAgainst": 6,
+            "goalDifference": 0,
+            "points": 3
+          },
+          {
+            "position": 3,
+            "team": {
+              "abbr": "JPN",
+              "name": "Japan",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
+              "friendId": "hamish",
+              "friendName": "Hamish",
+              "friendColour": "#C8102E"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 1,
+            "lost": 0,
+            "goalsFor": 2,
+            "goalsAgainst": 2,
+            "goalDifference": 0,
+            "points": 1
+          },
+          {
+            "position": 4,
+            "team": {
+              "abbr": "TUN",
+              "name": "Tunisia",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/tun.png",
+              "friendId": "hamish",
+              "friendName": "Hamish",
+              "friendColour": "#C8102E"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 0,
+            "lost": 1,
+            "goalsFor": 1,
+            "goalsAgainst": 5,
+            "goalDifference": -4,
+            "points": 0
+          }
+        ]
+      },
+      {
+        "group": "G",
+        "table": [
+          {
+            "position": 1,
+            "team": {
+              "abbr": "IRN",
+              "name": "Iran",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/irn.png",
+              "friendId": "dan",
+              "friendName": "Dan",
+              "friendColour": "#00843D"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 1,
+            "lost": 0,
+            "goalsFor": 2,
+            "goalsAgainst": 2,
+            "goalDifference": 0,
+            "points": 1
+          },
+          {
+            "position": 2,
+            "team": {
+              "abbr": "NZL",
+              "name": "New Zealand",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
+              "friendId": "boris",
+              "friendName": "Boris",
+              "friendColour": "#E6A817"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 1,
+            "lost": 0,
+            "goalsFor": 2,
+            "goalsAgainst": 2,
+            "goalDifference": 0,
+            "points": 1
+          },
+          {
+            "position": 3,
+            "team": {
+              "abbr": "BEL",
+              "name": "Belgium",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/bel.png",
+              "friendId": "boris",
+              "friendName": "Boris",
+              "friendColour": "#E6A817"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 1,
+            "lost": 0,
+            "goalsFor": 1,
+            "goalsAgainst": 1,
+            "goalDifference": 0,
+            "points": 1
+          },
+          {
+            "position": 4,
+            "team": {
+              "abbr": "EGY",
+              "name": "Egypt",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/egy.png",
+              "friendId": "dan",
+              "friendName": "Dan",
+              "friendColour": "#00843D"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 1,
+            "lost": 0,
+            "goalsFor": 1,
+            "goalsAgainst": 1,
+            "goalDifference": 0,
+            "points": 1
+          }
+        ]
+      },
+      {
+        "group": "H",
+        "table": [
+          {
+            "position": 1,
+            "team": {
+              "abbr": "KSA",
+              "name": "Saudi Arabia",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/ksa.png",
+              "friendId": "jake",
+              "friendName": "Jake",
+              "friendColour": "#455A64"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 1,
+            "lost": 0,
+            "goalsFor": 1,
+            "goalsAgainst": 1,
+            "goalDifference": 0,
+            "points": 1
+          },
+          {
+            "position": 2,
+            "team": {
+              "abbr": "URU",
+              "name": "Uruguay",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/uru.png",
+              "friendId": "boomer",
+              "friendName": "Boomer",
+              "friendColour": "#E65100"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 1,
+            "lost": 0,
+            "goalsFor": 1,
+            "goalsAgainst": 1,
+            "goalDifference": 0,
+            "points": 1
+          },
+          {
+            "position": 3,
+            "team": {
+              "abbr": "CPV",
+              "name": "Cape Verde",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/cpv.png",
+              "friendId": "dan",
+              "friendName": "Dan",
+              "friendColour": "#00843D"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 1,
+            "lost": 0,
+            "goalsFor": 0,
+            "goalsAgainst": 0,
+            "goalDifference": 0,
+            "points": 1
+          },
+          {
+            "position": 4,
+            "team": {
+              "abbr": "ESP",
+              "name": "Spain",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+              "friendId": "hamish",
+              "friendName": "Hamish",
+              "friendColour": "#C8102E"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 1,
+            "lost": 0,
+            "goalsFor": 0,
+            "goalsAgainst": 0,
+            "goalDifference": 0,
+            "points": 1
+          }
+        ]
+      },
+      {
+        "group": "I",
+        "table": [
+          {
+            "position": 1,
+            "team": {
+              "abbr": "NOR",
+              "name": "Norway",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/nor.png",
+              "friendId": "boris",
+              "friendName": "Boris",
+              "friendColour": "#E6A817"
+            },
+            "played": 1,
+            "won": 1,
+            "drawn": 0,
+            "lost": 0,
+            "goalsFor": 4,
+            "goalsAgainst": 1,
+            "goalDifference": 3,
+            "points": 3
+          },
+          {
+            "position": 2,
+            "team": {
+              "abbr": "FRA",
+              "name": "France",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+              "friendId": "tim",
+              "friendName": "Tim",
+              "friendColour": "#1565C0"
+            },
+            "played": 1,
+            "won": 1,
+            "drawn": 0,
+            "lost": 0,
+            "goalsFor": 3,
+            "goalsAgainst": 1,
+            "goalDifference": 2,
+            "points": 3
+          },
+          {
+            "position": 3,
+            "team": {
+              "abbr": "SEN",
+              "name": "Senegal",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sen.png",
+              "friendId": "ben",
+              "friendName": "Ben",
+              "friendColour": "#0097A7"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 0,
+            "lost": 1,
+            "goalsFor": 1,
+            "goalsAgainst": 3,
+            "goalDifference": -2,
+            "points": 0
+          },
+          {
+            "position": 4,
+            "team": {
+              "abbr": "IRQ",
+              "name": "Iraq",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/irq.png",
+              "friendId": "boomer",
+              "friendName": "Boomer",
+              "friendColour": "#E65100"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 0,
+            "lost": 1,
+            "goalsFor": 1,
+            "goalsAgainst": 4,
+            "goalDifference": -3,
+            "points": 0
+          }
+        ]
+      },
+      {
+        "group": "J",
+        "table": [
+          {
+            "position": 1,
+            "team": {
+              "abbr": "ARG",
+              "name": "Argentina",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+              "friendId": "tim",
+              "friendName": "Tim",
+              "friendColour": "#1565C0"
+            },
+            "played": 1,
+            "won": 1,
+            "drawn": 0,
+            "lost": 0,
+            "goalsFor": 3,
+            "goalsAgainst": 0,
+            "goalDifference": 3,
+            "points": 3
+          },
+          {
+            "position": 2,
+            "team": {
+              "abbr": "AUT",
+              "name": "Austria",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
+              "friendId": "boomer",
+              "friendName": "Boomer",
+              "friendColour": "#E65100"
+            },
+            "played": 1,
+            "won": 1,
+            "drawn": 0,
+            "lost": 0,
+            "goalsFor": 3,
+            "goalsAgainst": 1,
+            "goalDifference": 2,
+            "points": 3
+          },
+          {
+            "position": 3,
+            "team": {
+              "abbr": "JOR",
+              "name": "Jordan",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/jor.png",
+              "friendId": "ben",
+              "friendName": "Ben",
+              "friendColour": "#0097A7"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 0,
+            "lost": 1,
+            "goalsFor": 1,
+            "goalsAgainst": 3,
+            "goalDifference": -2,
+            "points": 0
+          },
+          {
+            "position": 4,
+            "team": {
+              "abbr": "ALG",
+              "name": "Algeria",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/alg.png",
+              "friendId": "tim",
+              "friendName": "Tim",
+              "friendColour": "#1565C0"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 0,
+            "lost": 1,
+            "goalsFor": 0,
+            "goalsAgainst": 3,
+            "goalDifference": -3,
+            "points": 0
+          }
+        ]
+      },
+      {
+        "group": "K",
+        "table": [
+          {
+            "position": 1,
+            "team": {
+              "abbr": "COL",
+              "name": "Colombia",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/col.png",
+              "friendId": "boris",
+              "friendName": "Boris",
+              "friendColour": "#E6A817"
+            },
+            "played": 1,
+            "won": 1,
+            "drawn": 0,
+            "lost": 0,
+            "goalsFor": 3,
+            "goalsAgainst": 1,
+            "goalDifference": 2,
+            "points": 3
+          },
+          {
+            "position": 2,
+            "team": {
+              "abbr": "COD",
+              "name": "Congo DR",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rdc.png",
+              "friendId": "ben",
+              "friendName": "Ben",
+              "friendColour": "#0097A7"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 1,
+            "lost": 0,
+            "goalsFor": 1,
+            "goalsAgainst": 1,
+            "goalDifference": 0,
+            "points": 1
+          },
+          {
+            "position": 3,
+            "team": {
+              "abbr": "POR",
+              "name": "Portugal",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/por.png",
+              "friendId": "boomer",
+              "friendName": "Boomer",
+              "friendColour": "#E65100"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 1,
+            "lost": 0,
+            "goalsFor": 1,
+            "goalsAgainst": 1,
+            "goalDifference": 0,
+            "points": 1
+          },
+          {
+            "position": 4,
+            "team": {
+              "abbr": "UZB",
+              "name": "Uzbekistan",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/uzb.png",
+              "friendId": "rob",
+              "friendName": "Rob",
+              "friendColour": "#8E24AA"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 0,
+            "lost": 1,
+            "goalsFor": 1,
+            "goalsAgainst": 3,
+            "goalDifference": -2,
+            "points": 0
+          }
+        ]
+      },
+      {
+        "group": "L",
+        "table": [
+          {
+            "position": 1,
+            "team": {
+              "abbr": "ENG",
+              "name": "England",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
+              "friendId": "jake",
+              "friendName": "Jake",
+              "friendColour": "#455A64"
+            },
+            "played": 1,
+            "won": 1,
+            "drawn": 0,
+            "lost": 0,
+            "goalsFor": 4,
+            "goalsAgainst": 2,
+            "goalDifference": 2,
+            "points": 3
+          },
+          {
+            "position": 2,
+            "team": {
+              "abbr": "GHA",
+              "name": "Ghana",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/gha.png",
+              "friendId": "rob",
+              "friendName": "Rob",
+              "friendColour": "#8E24AA"
+            },
+            "played": 1,
+            "won": 1,
+            "drawn": 0,
+            "lost": 0,
+            "goalsFor": 1,
+            "goalsAgainst": 0,
+            "goalDifference": 1,
+            "points": 3
+          },
+          {
+            "position": 3,
+            "team": {
+              "abbr": "PAN",
+              "name": "Panama",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/pan.png",
+              "friendId": "boris",
+              "friendName": "Boris",
+              "friendColour": "#E6A817"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 0,
+            "lost": 1,
+            "goalsFor": 0,
+            "goalsAgainst": 1,
+            "goalDifference": -1,
+            "points": 0
+          },
+          {
+            "position": 4,
+            "team": {
+              "abbr": "CRO",
+              "name": "Croatia",
+              "logo": "https://a.espncdn.com/i/teamlogos/countries/500/cro.png",
+              "friendId": "rob",
+              "friendName": "Rob",
+              "friendColour": "#8E24AA"
+            },
+            "played": 1,
+            "won": 0,
+            "drawn": 0,
+            "lost": 1,
+            "goalsFor": 2,
+            "goalsAgainst": 4,
+            "goalDifference": -2,
+            "points": 0
+          }
+        ]
+      }
+    ],
+    "lastUpdated": "2026-06-20T23:30:31.577Z"
+  },
+  "fixtures": {
+    "matches": [
+      {
+        "id": "760415",
+        "stage": "GROUP_STAGE",
+        "group": "A",
+        "utcDate": "2026-06-11T19:00Z",
+        "status": "STATUS_FINAL",
+        "minute": "FT",
+        "homeTeam": {
+          "abbr": "MEX",
+          "name": "Mexico",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+          "friendId": "dan",
+          "friendName": "Dan",
+          "friendColour": "#00843D"
+        },
+        "awayTeam": {
+          "abbr": "RSA",
+          "name": "South Africa",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png",
+          "friendId": "boris",
+          "friendName": "Boris",
+          "friendColour": "#E6A817"
+        },
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "venue": "Estadio Banorte",
+        "city": "Mexico City"
+      },
+      {
+        "id": "760414",
+        "stage": "GROUP_STAGE",
+        "group": "A",
+        "utcDate": "2026-06-12T02:00Z",
+        "status": "STATUS_FINAL",
+        "minute": "FT",
+        "homeTeam": {
+          "abbr": "KOR",
+          "name": "South Korea",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/kor.png",
+          "friendId": "tim",
+          "friendName": "Tim",
+          "friendColour": "#1565C0"
+        },
+        "awayTeam": {
+          "abbr": "CZE",
+          "name": "Czechia",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
+          "friendId": "tim",
+          "friendName": "Tim",
+          "friendColour": "#1565C0"
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "venue": "Estadio Akron",
+        "city": "Guadalajara"
+      },
+      {
+        "id": "760416",
+        "stage": "GROUP_STAGE",
+        "group": "B",
+        "utcDate": "2026-06-12T19:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "CAN",
+          "name": "Canada",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
+          "friendId": "boomer",
+          "friendName": "Boomer",
+          "friendColour": "#E65100"
+        },
+        "awayTeam": {
+          "abbr": "BIH",
+          "name": "Bosnia-Herzegovina",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/bih.png",
+          "friendId": "dan",
+          "friendName": "Dan",
+          "friendColour": "#00843D"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "BMO Field",
+        "city": "Toronto"
+      },
+      {
+        "id": "760417",
+        "stage": "GROUP_STAGE",
+        "group": "D",
+        "utcDate": "2026-06-13T01:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "USA",
+          "name": "United States",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+          "friendId": "hamish",
+          "friendName": "Hamish",
+          "friendColour": "#C8102E"
+        },
+        "awayTeam": {
+          "abbr": "PAR",
+          "name": "Paraguay",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
+          "friendId": "ben",
+          "friendName": "Ben",
+          "friendColour": "#0097A7"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "SoFi Stadium",
+        "city": "Inglewood, California"
+      },
+      {
+        "id": "760420",
+        "stage": "GROUP_STAGE",
+        "group": "B",
+        "utcDate": "2026-06-13T19:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "QAT",
+          "name": "Qatar",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/qat.png",
+          "friendId": "boomer",
+          "friendName": "Boomer",
+          "friendColour": "#E65100"
+        },
+        "awayTeam": {
+          "abbr": "SUI",
+          "name": "Switzerland",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
+          "friendId": "rob",
+          "friendName": "Rob",
+          "friendColour": "#8E24AA"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Levi's Stadium",
+        "city": "Santa Clara, California"
+      },
+      {
+        "id": "760419",
+        "stage": "GROUP_STAGE",
+        "group": "C",
+        "utcDate": "2026-06-13T22:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "BRA",
+          "name": "Brazil",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+          "friendId": "dan",
+          "friendName": "Dan",
+          "friendColour": "#00843D"
+        },
+        "awayTeam": {
+          "abbr": "MAR",
+          "name": "Morocco",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/mar.png",
+          "friendId": "ben",
+          "friendName": "Ben",
+          "friendColour": "#0097A7"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "MetLife Stadium",
+        "city": "East Rutherford, New Jersey"
+      },
+      {
+        "id": "760418",
+        "stage": "GROUP_STAGE",
+        "group": "C",
+        "utcDate": "2026-06-14T01:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "HAI",
+          "name": "Haiti",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/hai.png",
+          "friendId": "hamish",
+          "friendName": "Hamish",
+          "friendColour": "#C8102E"
+        },
+        "awayTeam": {
+          "abbr": "SCO",
+          "name": "Scotland",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sco.png",
+          "friendId": "tim",
+          "friendName": "Tim",
+          "friendColour": "#1565C0"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Gillette Stadium",
+        "city": "Foxborough, Massachusetts"
+      },
+      {
+        "id": "760421",
+        "stage": "GROUP_STAGE",
+        "group": "D",
+        "utcDate": "2026-06-14T04:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "AUS",
+          "name": "Australia",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
+          "friendId": "ben",
+          "friendName": "Ben",
+          "friendColour": "#0097A7"
+        },
+        "awayTeam": {
+          "abbr": "TUR",
+          "name": "Türkiye",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/tur.png",
+          "friendId": "jake",
+          "friendName": "Jake",
+          "friendColour": "#455A64"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "BC Place",
+        "city": "Vancouver"
+      },
+      {
+        "id": "760422",
+        "stage": "GROUP_STAGE",
+        "group": "E",
+        "utcDate": "2026-06-14T17:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "GER",
+          "name": "Germany",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+          "friendId": "jake",
+          "friendName": "Jake",
+          "friendColour": "#455A64"
+        },
+        "awayTeam": {
+          "abbr": "CUW",
+          "name": "Curaçao",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/cuw.png",
+          "friendId": "jake",
+          "friendName": "Jake",
+          "friendColour": "#455A64"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "NRG Stadium",
+        "city": "Houston, Texas"
+      },
+      {
+        "id": "760425",
+        "stage": "GROUP_STAGE",
+        "group": "F",
+        "utcDate": "2026-06-14T20:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "NED",
+          "name": "Netherlands",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
+          "friendId": "rob",
+          "friendName": "Rob",
+          "friendColour": "#8E24AA"
+        },
+        "awayTeam": {
+          "abbr": "JPN",
+          "name": "Japan",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
+          "friendId": "hamish",
+          "friendName": "Hamish",
+          "friendColour": "#C8102E"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "AT&T Stadium",
+        "city": "Arlington, Texas"
+      },
+      {
+        "id": "760423",
+        "stage": "GROUP_STAGE",
+        "group": "E",
+        "utcDate": "2026-06-14T23:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "CIV",
+          "name": "Ivory Coast",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/civ.png",
+          "friendId": "jake",
+          "friendName": "Jake",
+          "friendColour": "#455A64"
+        },
+        "awayTeam": {
+          "abbr": "ECU",
+          "name": "Ecuador",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png",
+          "friendId": "rob",
+          "friendName": "Rob",
+          "friendColour": "#8E24AA"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Lincoln Financial Field",
+        "city": "Philadelphia, Pennsylvania"
+      },
+      {
+        "id": "760424",
+        "stage": "GROUP_STAGE",
+        "group": "F",
+        "utcDate": "2026-06-15T02:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "SWE",
+          "name": "Sweden",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png",
+          "friendId": "hamish",
+          "friendName": "Hamish",
+          "friendColour": "#C8102E"
+        },
+        "awayTeam": {
+          "abbr": "TUN",
+          "name": "Tunisia",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/tun.png",
+          "friendId": "hamish",
+          "friendName": "Hamish",
+          "friendColour": "#C8102E"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Estadio BBVA",
+        "city": "Guadalupe"
+      },
+      {
+        "id": "760428",
+        "stage": "GROUP_STAGE",
+        "group": "H",
+        "utcDate": "2026-06-15T16:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "ESP",
+          "name": "Spain",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+          "friendId": "hamish",
+          "friendName": "Hamish",
+          "friendColour": "#C8102E"
+        },
+        "awayTeam": {
+          "abbr": "CPV",
+          "name": "Cape Verde",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/cpv.png",
+          "friendId": "dan",
+          "friendName": "Dan",
+          "friendColour": "#00843D"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Mercedes-Benz Stadium",
+        "city": "Atlanta, Georgia"
+      },
+      {
+        "id": "760426",
+        "stage": "GROUP_STAGE",
+        "group": "G",
+        "utcDate": "2026-06-15T19:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "BEL",
+          "name": "Belgium",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/bel.png",
+          "friendId": "boris",
+          "friendName": "Boris",
+          "friendColour": "#E6A817"
+        },
+        "awayTeam": {
+          "abbr": "EGY",
+          "name": "Egypt",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/egy.png",
+          "friendId": "dan",
+          "friendName": "Dan",
+          "friendColour": "#00843D"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Lumen Field",
+        "city": "Seattle, Washington"
+      },
+      {
+        "id": "760429",
+        "stage": "GROUP_STAGE",
+        "group": "H",
+        "utcDate": "2026-06-15T22:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "KSA",
+          "name": "Saudi Arabia",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/ksa.png",
+          "friendId": "jake",
+          "friendName": "Jake",
+          "friendColour": "#455A64"
+        },
+        "awayTeam": {
+          "abbr": "URU",
+          "name": "Uruguay",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/uru.png",
+          "friendId": "boomer",
+          "friendName": "Boomer",
+          "friendColour": "#E65100"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Hard Rock Stadium",
+        "city": "Miami Gardens, Florida"
+      },
+      {
+        "id": "760427",
+        "stage": "GROUP_STAGE",
+        "group": "G",
+        "utcDate": "2026-06-16T01:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "IRN",
+          "name": "Iran",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/irn.png",
+          "friendId": "dan",
+          "friendName": "Dan",
+          "friendColour": "#00843D"
+        },
+        "awayTeam": {
+          "abbr": "NZL",
+          "name": "New Zealand",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
+          "friendId": "boris",
+          "friendName": "Boris",
+          "friendColour": "#E6A817"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "SoFi Stadium",
+        "city": "Inglewood, California"
+      },
+      {
+        "id": "760432",
+        "stage": "GROUP_STAGE",
+        "group": "I",
+        "utcDate": "2026-06-16T19:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "FRA",
+          "name": "France",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+          "friendId": "tim",
+          "friendName": "Tim",
+          "friendColour": "#1565C0"
+        },
+        "awayTeam": {
+          "abbr": "SEN",
+          "name": "Senegal",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sen.png",
+          "friendId": "ben",
+          "friendName": "Ben",
+          "friendColour": "#0097A7"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "MetLife Stadium",
+        "city": "East Rutherford, New Jersey"
+      },
+      {
+        "id": "760430",
+        "stage": "GROUP_STAGE",
+        "group": "I",
+        "utcDate": "2026-06-16T22:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "IRQ",
+          "name": "Iraq",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/irq.png",
+          "friendId": "boomer",
+          "friendName": "Boomer",
+          "friendColour": "#E65100"
+        },
+        "awayTeam": {
+          "abbr": "NOR",
+          "name": "Norway",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/nor.png",
+          "friendId": "boris",
+          "friendName": "Boris",
+          "friendColour": "#E6A817"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Gillette Stadium",
+        "city": "Foxborough, Massachusetts"
+      },
+      {
+        "id": "760433",
+        "stage": "GROUP_STAGE",
+        "group": "J",
+        "utcDate": "2026-06-17T01:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "ARG",
+          "name": "Argentina",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+          "friendId": "tim",
+          "friendName": "Tim",
+          "friendColour": "#1565C0"
+        },
+        "awayTeam": {
+          "abbr": "ALG",
+          "name": "Algeria",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/alg.png",
+          "friendId": "tim",
+          "friendName": "Tim",
+          "friendColour": "#1565C0"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "GEHA Field at Arrowhead Stadium",
+        "city": "Kansas City, Missouri"
+      },
+      {
+        "id": "760431",
+        "stage": "GROUP_STAGE",
+        "group": "J",
+        "utcDate": "2026-06-17T04:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "AUT",
+          "name": "Austria",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
+          "friendId": "boomer",
+          "friendName": "Boomer",
+          "friendColour": "#E65100"
+        },
+        "awayTeam": {
+          "abbr": "JOR",
+          "name": "Jordan",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/jor.png",
+          "friendId": "ben",
+          "friendName": "Ben",
+          "friendColour": "#0097A7"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Levi's Stadium",
+        "city": "Santa Clara, California"
+      },
+      {
+        "id": "760435",
+        "stage": "GROUP_STAGE",
+        "group": "K",
+        "utcDate": "2026-06-17T17:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "POR",
+          "name": "Portugal",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/por.png",
+          "friendId": "boomer",
+          "friendName": "Boomer",
+          "friendColour": "#E65100"
+        },
+        "awayTeam": {
+          "abbr": "COD",
+          "name": "Congo DR",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/cod.png",
+          "friendId": "ben",
+          "friendName": "Ben",
+          "friendColour": "#0097A7"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "NRG Stadium",
+        "city": "Houston, Texas"
+      },
+      {
+        "id": "760437",
+        "stage": "GROUP_STAGE",
+        "group": "L",
+        "utcDate": "2026-06-17T20:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "ENG",
+          "name": "England",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
+          "friendId": "jake",
+          "friendName": "Jake",
+          "friendColour": "#455A64"
+        },
+        "awayTeam": {
+          "abbr": "CRO",
+          "name": "Croatia",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/cro.png",
+          "friendId": "rob",
+          "friendName": "Rob",
+          "friendColour": "#8E24AA"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "AT&T Stadium",
+        "city": "Arlington, Texas"
+      },
+      {
+        "id": "760434",
+        "stage": "GROUP_STAGE",
+        "group": "L",
+        "utcDate": "2026-06-17T23:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "GHA",
+          "name": "Ghana",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/gha.png",
+          "friendId": "rob",
+          "friendName": "Rob",
+          "friendColour": "#8E24AA"
+        },
+        "awayTeam": {
+          "abbr": "PAN",
+          "name": "Panama",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/pan.png",
+          "friendId": "boris",
+          "friendName": "Boris",
+          "friendColour": "#E6A817"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "BMO Field",
+        "city": "Toronto"
+      },
+      {
+        "id": "760436",
+        "stage": "GROUP_STAGE",
+        "group": "K",
+        "utcDate": "2026-06-18T02:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "UZB",
+          "name": "Uzbekistan",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/uzb.png",
+          "friendId": "rob",
+          "friendName": "Rob",
+          "friendColour": "#8E24AA"
+        },
+        "awayTeam": {
+          "abbr": "COL",
+          "name": "Colombia",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/col.png",
+          "friendId": "boris",
+          "friendName": "Boris",
+          "friendColour": "#E6A817"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Estadio Banorte",
+        "city": "Mexico City"
+      },
+      {
+        "id": "760438",
+        "stage": "GROUP_STAGE",
+        "group": "A",
+        "utcDate": "2026-06-18T16:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "CZE",
+          "name": "Czechia",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
+          "friendId": "tim",
+          "friendName": "Tim",
+          "friendColour": "#1565C0"
+        },
+        "awayTeam": {
+          "abbr": "RSA",
+          "name": "South Africa",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png",
+          "friendId": "boris",
+          "friendName": "Boris",
+          "friendColour": "#E6A817"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Mercedes-Benz Stadium",
+        "city": "Atlanta, Georgia"
+      },
+      {
+        "id": "760439",
+        "stage": "GROUP_STAGE",
+        "group": "B",
+        "utcDate": "2026-06-18T19:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "SUI",
+          "name": "Switzerland",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
+          "friendId": "rob",
+          "friendName": "Rob",
+          "friendColour": "#8E24AA"
+        },
+        "awayTeam": {
+          "abbr": "BIH",
+          "name": "Bosnia-Herzegovina",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/bih.png",
+          "friendId": "dan",
+          "friendName": "Dan",
+          "friendColour": "#00843D"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "SoFi Stadium",
+        "city": "Inglewood, California"
+      },
+      {
+        "id": "760440",
+        "stage": "GROUP_STAGE",
+        "group": "B",
+        "utcDate": "2026-06-18T22:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "CAN",
+          "name": "Canada",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
+          "friendId": "boomer",
+          "friendName": "Boomer",
+          "friendColour": "#E65100"
+        },
+        "awayTeam": {
+          "abbr": "QAT",
+          "name": "Qatar",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/qat.png",
+          "friendId": "boomer",
+          "friendName": "Boomer",
+          "friendColour": "#E65100"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "BC Place",
+        "city": "Vancouver"
+      },
+      {
+        "id": "760441",
+        "stage": "GROUP_STAGE",
+        "group": "A",
+        "utcDate": "2026-06-19T01:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "MEX",
+          "name": "Mexico",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+          "friendId": "dan",
+          "friendName": "Dan",
+          "friendColour": "#00843D"
+        },
+        "awayTeam": {
+          "abbr": "KOR",
+          "name": "South Korea",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/kor.png",
+          "friendId": "tim",
+          "friendName": "Tim",
+          "friendColour": "#1565C0"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Estadio Akron",
+        "city": "Guadalajara"
+      },
+      {
+        "id": "760442",
+        "stage": "GROUP_STAGE",
+        "group": "D",
+        "utcDate": "2026-06-19T19:00Z",
+        "status": "STATUS_FINAL",
+        "minute": "FT",
+        "homeTeam": {
+          "abbr": "USA",
+          "name": "United States",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+          "friendId": "hamish",
+          "friendName": "Hamish",
+          "friendColour": "#C8102E"
+        },
+        "awayTeam": {
+          "abbr": "AUS",
+          "name": "Australia",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
+          "friendId": "ben",
+          "friendName": "Ben",
+          "friendColour": "#0097A7"
+        },
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "venue": "Lumen Field",
+        "city": "Seattle, Washington"
+      },
+      {
+        "id": "760445",
+        "stage": "GROUP_STAGE",
+        "group": "C",
+        "utcDate": "2026-06-19T22:00Z",
+        "status": "STATUS_FINAL",
+        "minute": "FT",
+        "homeTeam": {
+          "abbr": "SCO",
+          "name": "Scotland",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sco.png",
+          "friendId": "tim",
+          "friendName": "Tim",
+          "friendColour": "#1565C0"
+        },
+        "awayTeam": {
+          "abbr": "MAR",
+          "name": "Morocco",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/mar.png",
+          "friendId": "ben",
+          "friendName": "Ben",
+          "friendColour": "#0097A7"
+        },
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "venue": "Gillette Stadium",
+        "city": "Foxborough, Massachusetts"
+      },
+      {
+        "id": "760444",
+        "stage": "GROUP_STAGE",
+        "group": "C",
+        "utcDate": "2026-06-20T00:30Z",
+        "status": "STATUS_FINAL",
+        "minute": "FT",
+        "homeTeam": {
+          "abbr": "BRA",
+          "name": "Brazil",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+          "friendId": "dan",
+          "friendName": "Dan",
+          "friendColour": "#00843D"
+        },
+        "awayTeam": {
+          "abbr": "HAI",
+          "name": "Haiti",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/hai.png",
+          "friendId": "hamish",
+          "friendName": "Hamish",
+          "friendColour": "#C8102E"
+        },
+        "score": {
+          "home": 3,
+          "away": 0
+        },
+        "venue": "Lincoln Financial Field",
+        "city": "Philadelphia, Pennsylvania"
+      },
+      {
+        "id": "760443",
+        "stage": "GROUP_STAGE",
+        "group": "D",
+        "utcDate": "2026-06-20T03:00Z",
+        "status": "STATUS_FINAL",
+        "minute": "FT",
+        "homeTeam": {
+          "abbr": "TUR",
+          "name": "Türkiye",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/tur.png",
+          "friendId": "jake",
+          "friendName": "Jake",
+          "friendColour": "#455A64"
+        },
+        "awayTeam": {
+          "abbr": "PAR",
+          "name": "Paraguay",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
+          "friendId": "ben",
+          "friendName": "Ben",
+          "friendColour": "#0097A7"
+        },
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "venue": "Levi's Stadium",
+        "city": "Santa Clara, California"
+      },
+      {
+        "id": "760447",
+        "stage": "GROUP_STAGE",
+        "group": "F",
+        "utcDate": "2026-06-20T17:00Z",
+        "status": "STATUS_FINAL",
+        "minute": "FT",
+        "homeTeam": {
+          "abbr": "NED",
+          "name": "Netherlands",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
+          "friendId": "rob",
+          "friendName": "Rob",
+          "friendColour": "#8E24AA"
+        },
+        "awayTeam": {
+          "abbr": "SWE",
+          "name": "Sweden",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png",
+          "friendId": "hamish",
+          "friendName": "Hamish",
+          "friendColour": "#C8102E"
+        },
+        "score": {
+          "home": 5,
+          "away": 1
+        },
+        "venue": "NRG Stadium",
+        "city": "Houston, Texas"
+      },
+      {
+        "id": "760448",
+        "stage": "GROUP_STAGE",
+        "group": "E",
+        "utcDate": "2026-06-20T20:00Z",
+        "status": "STATUS_FINAL",
+        "minute": "FT",
+        "homeTeam": {
+          "abbr": "GER",
+          "name": "Germany",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+          "friendId": "jake",
+          "friendName": "Jake",
+          "friendColour": "#455A64"
+        },
+        "awayTeam": {
+          "abbr": "CIV",
+          "name": "Ivory Coast",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/civ.png",
+          "friendId": "jake",
+          "friendName": "Jake",
+          "friendColour": "#455A64"
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "venue": "BMO Field",
+        "city": "Toronto"
+      },
+      {
+        "id": "760446",
+        "stage": "GROUP_STAGE",
+        "group": "E",
+        "utcDate": "2026-06-21T00:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "ECU",
+          "name": "Ecuador",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png",
+          "friendId": "rob",
+          "friendName": "Rob",
+          "friendColour": "#8E24AA"
+        },
+        "awayTeam": {
+          "abbr": "CUW",
+          "name": "Curaçao",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/cuw.png",
+          "friendId": "jake",
+          "friendName": "Jake",
+          "friendColour": "#455A64"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "GEHA Field at Arrowhead Stadium",
+        "city": "Kansas City, Missouri"
+      },
+      {
+        "id": "760449",
+        "stage": "GROUP_STAGE",
+        "group": "F",
+        "utcDate": "2026-06-21T04:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "TUN",
+          "name": "Tunisia",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/tun.png",
+          "friendId": "hamish",
+          "friendName": "Hamish",
+          "friendColour": "#C8102E"
+        },
+        "awayTeam": {
+          "abbr": "JPN",
+          "name": "Japan",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
+          "friendId": "hamish",
+          "friendName": "Hamish",
+          "friendColour": "#C8102E"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Estadio BBVA",
+        "city": "Guadalupe"
+      },
+      {
+        "id": "760453",
+        "stage": "GROUP_STAGE",
+        "group": "H",
+        "utcDate": "2026-06-21T16:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "ESP",
+          "name": "Spain",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+          "friendId": "hamish",
+          "friendName": "Hamish",
+          "friendColour": "#C8102E"
+        },
+        "awayTeam": {
+          "abbr": "KSA",
+          "name": "Saudi Arabia",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/ksa.png",
+          "friendId": "jake",
+          "friendName": "Jake",
+          "friendColour": "#455A64"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Mercedes-Benz Stadium",
+        "city": "Atlanta, Georgia"
+      },
+      {
+        "id": "760451",
+        "stage": "GROUP_STAGE",
+        "group": "G",
+        "utcDate": "2026-06-21T19:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "BEL",
+          "name": "Belgium",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/bel.png",
+          "friendId": "boris",
+          "friendName": "Boris",
+          "friendColour": "#E6A817"
+        },
+        "awayTeam": {
+          "abbr": "IRN",
+          "name": "Iran",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/irn.png",
+          "friendId": "dan",
+          "friendName": "Dan",
+          "friendColour": "#00843D"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "SoFi Stadium",
+        "city": "Inglewood, California"
+      },
+      {
+        "id": "760450",
+        "stage": "GROUP_STAGE",
+        "group": "H",
+        "utcDate": "2026-06-21T22:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "URU",
+          "name": "Uruguay",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/uru.png",
+          "friendId": "boomer",
+          "friendName": "Boomer",
+          "friendColour": "#E65100"
+        },
+        "awayTeam": {
+          "abbr": "CPV",
+          "name": "Cape Verde",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/cpv.png",
+          "friendId": "dan",
+          "friendName": "Dan",
+          "friendColour": "#00843D"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Hard Rock Stadium",
+        "city": "Miami Gardens, Florida"
+      },
+      {
+        "id": "760452",
+        "stage": "GROUP_STAGE",
+        "group": "G",
+        "utcDate": "2026-06-22T01:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "NZL",
+          "name": "New Zealand",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
+          "friendId": "boris",
+          "friendName": "Boris",
+          "friendColour": "#E6A817"
+        },
+        "awayTeam": {
+          "abbr": "EGY",
+          "name": "Egypt",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/egy.png",
+          "friendId": "dan",
+          "friendName": "Dan",
+          "friendColour": "#00843D"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "BC Place",
+        "city": "Vancouver"
+      },
+      {
+        "id": "760456",
+        "stage": "GROUP_STAGE",
+        "group": "J",
+        "utcDate": "2026-06-22T17:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "ARG",
+          "name": "Argentina",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+          "friendId": "tim",
+          "friendName": "Tim",
+          "friendColour": "#1565C0"
+        },
+        "awayTeam": {
+          "abbr": "AUT",
+          "name": "Austria",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
+          "friendId": "boomer",
+          "friendName": "Boomer",
+          "friendColour": "#E65100"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "AT&T Stadium",
+        "city": "Arlington, Texas"
+      },
+      {
+        "id": "760457",
+        "stage": "GROUP_STAGE",
+        "group": "I",
+        "utcDate": "2026-06-22T21:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "FRA",
+          "name": "France",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+          "friendId": "tim",
+          "friendName": "Tim",
+          "friendColour": "#1565C0"
+        },
+        "awayTeam": {
+          "abbr": "IRQ",
+          "name": "Iraq",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/irq.png",
+          "friendId": "boomer",
+          "friendName": "Boomer",
+          "friendColour": "#E65100"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Lincoln Financial Field",
+        "city": "Philadelphia, Pennsylvania"
+      },
+      {
+        "id": "760454",
+        "stage": "GROUP_STAGE",
+        "group": "I",
+        "utcDate": "2026-06-23T00:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "NOR",
+          "name": "Norway",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/nor.png",
+          "friendId": "boris",
+          "friendName": "Boris",
+          "friendColour": "#E6A817"
+        },
+        "awayTeam": {
+          "abbr": "SEN",
+          "name": "Senegal",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sen.png",
+          "friendId": "ben",
+          "friendName": "Ben",
+          "friendColour": "#0097A7"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "MetLife Stadium",
+        "city": "East Rutherford, New Jersey"
+      },
+      {
+        "id": "760455",
+        "stage": "GROUP_STAGE",
+        "group": "J",
+        "utcDate": "2026-06-23T03:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "JOR",
+          "name": "Jordan",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/jor.png",
+          "friendId": "ben",
+          "friendName": "Ben",
+          "friendColour": "#0097A7"
+        },
+        "awayTeam": {
+          "abbr": "ALG",
+          "name": "Algeria",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/alg.png",
+          "friendId": "tim",
+          "friendName": "Tim",
+          "friendColour": "#1565C0"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Levi's Stadium",
+        "city": "Santa Clara, California"
+      },
+      {
+        "id": "760461",
+        "stage": "GROUP_STAGE",
+        "group": "K",
+        "utcDate": "2026-06-23T17:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "POR",
+          "name": "Portugal",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/por.png",
+          "friendId": "boomer",
+          "friendName": "Boomer",
+          "friendColour": "#E65100"
+        },
+        "awayTeam": {
+          "abbr": "UZB",
+          "name": "Uzbekistan",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/uzb.png",
+          "friendId": "rob",
+          "friendName": "Rob",
+          "friendColour": "#8E24AA"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "NRG Stadium",
+        "city": "Houston, Texas"
+      },
+      {
+        "id": "760458",
+        "stage": "GROUP_STAGE",
+        "group": "L",
+        "utcDate": "2026-06-23T20:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "ENG",
+          "name": "England",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
+          "friendId": "jake",
+          "friendName": "Jake",
+          "friendColour": "#455A64"
+        },
+        "awayTeam": {
+          "abbr": "GHA",
+          "name": "Ghana",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/gha.png",
+          "friendId": "rob",
+          "friendName": "Rob",
+          "friendColour": "#8E24AA"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Gillette Stadium",
+        "city": "Foxborough, Massachusetts"
+      },
+      {
+        "id": "760460",
+        "stage": "GROUP_STAGE",
+        "group": "L",
+        "utcDate": "2026-06-23T23:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "PAN",
+          "name": "Panama",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/pan.png",
+          "friendId": "boris",
+          "friendName": "Boris",
+          "friendColour": "#E6A817"
+        },
+        "awayTeam": {
+          "abbr": "CRO",
+          "name": "Croatia",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/cro.png",
+          "friendId": "rob",
+          "friendName": "Rob",
+          "friendColour": "#8E24AA"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "BMO Field",
+        "city": "Toronto"
+      },
+      {
+        "id": "760459",
+        "stage": "GROUP_STAGE",
+        "group": "K",
+        "utcDate": "2026-06-24T02:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "COL",
+          "name": "Colombia",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/col.png",
+          "friendId": "boris",
+          "friendName": "Boris",
+          "friendColour": "#E6A817"
+        },
+        "awayTeam": {
+          "abbr": "COD",
+          "name": "Congo DR",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/cod.png",
+          "friendId": "ben",
+          "friendName": "Ben",
+          "friendColour": "#0097A7"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Estadio Akron",
+        "city": "Guadalajara"
+      },
+      {
+        "id": "760462",
+        "stage": "GROUP_STAGE",
+        "group": "B",
+        "utcDate": "2026-06-24T19:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "BIH",
+          "name": "Bosnia-Herzegovina",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/bih.png",
+          "friendId": "dan",
+          "friendName": "Dan",
+          "friendColour": "#00843D"
+        },
+        "awayTeam": {
+          "abbr": "QAT",
+          "name": "Qatar",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/qat.png",
+          "friendId": "boomer",
+          "friendName": "Boomer",
+          "friendColour": "#E65100"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Lumen Field",
+        "city": "Seattle, Washington"
+      },
+      {
+        "id": "760463",
+        "stage": "GROUP_STAGE",
+        "group": "B",
+        "utcDate": "2026-06-24T19:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "SUI",
+          "name": "Switzerland",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sui.png",
+          "friendId": "rob",
+          "friendName": "Rob",
+          "friendColour": "#8E24AA"
+        },
+        "awayTeam": {
+          "abbr": "CAN",
+          "name": "Canada",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/can.png",
+          "friendId": "boomer",
+          "friendName": "Boomer",
+          "friendColour": "#E65100"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "BC Place",
+        "city": "Vancouver"
+      },
+      {
+        "id": "760464",
+        "stage": "GROUP_STAGE",
+        "group": "C",
+        "utcDate": "2026-06-24T22:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "MAR",
+          "name": "Morocco",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/mar.png",
+          "friendId": "ben",
+          "friendName": "Ben",
+          "friendColour": "#0097A7"
+        },
+        "awayTeam": {
+          "abbr": "HAI",
+          "name": "Haiti",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/hai.png",
+          "friendId": "hamish",
+          "friendName": "Hamish",
+          "friendColour": "#C8102E"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Mercedes-Benz Stadium",
+        "city": "Atlanta, Georgia"
+      },
+      {
+        "id": "760465",
+        "stage": "GROUP_STAGE",
+        "group": "C",
+        "utcDate": "2026-06-24T22:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "SCO",
+          "name": "Scotland",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sco.png",
+          "friendId": "tim",
+          "friendName": "Tim",
+          "friendColour": "#1565C0"
+        },
+        "awayTeam": {
+          "abbr": "BRA",
+          "name": "Brazil",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/bra.png",
+          "friendId": "dan",
+          "friendName": "Dan",
+          "friendColour": "#00843D"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Hard Rock Stadium",
+        "city": "Miami Gardens, Florida"
+      },
+      {
+        "id": "760467",
+        "stage": "GROUP_STAGE",
+        "group": "A",
+        "utcDate": "2026-06-25T01:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "CZE",
+          "name": "Czechia",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/cze.png",
+          "friendId": "tim",
+          "friendName": "Tim",
+          "friendColour": "#1565C0"
+        },
+        "awayTeam": {
+          "abbr": "MEX",
+          "name": "Mexico",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/mex.png",
+          "friendId": "dan",
+          "friendName": "Dan",
+          "friendColour": "#00843D"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Estadio Banorte",
+        "city": "Mexico City"
+      },
+      {
+        "id": "760466",
+        "stage": "GROUP_STAGE",
+        "group": "A",
+        "utcDate": "2026-06-25T01:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "RSA",
+          "name": "South Africa",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rsa.png",
+          "friendId": "boris",
+          "friendName": "Boris",
+          "friendColour": "#E6A817"
+        },
+        "awayTeam": {
+          "abbr": "KOR",
+          "name": "South Korea",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/kor.png",
+          "friendId": "tim",
+          "friendName": "Tim",
+          "friendColour": "#1565C0"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Estadio BBVA",
+        "city": "Guadalupe"
+      },
+      {
+        "id": "760473",
+        "stage": "GROUP_STAGE",
+        "group": "E",
+        "utcDate": "2026-06-25T20:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "CUW",
+          "name": "Curaçao",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/cuw.png",
+          "friendId": "jake",
+          "friendName": "Jake",
+          "friendColour": "#455A64"
+        },
+        "awayTeam": {
+          "abbr": "CIV",
+          "name": "Ivory Coast",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/civ.png",
+          "friendId": "jake",
+          "friendName": "Jake",
+          "friendColour": "#455A64"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Lincoln Financial Field",
+        "city": "Philadelphia, Pennsylvania"
+      },
+      {
+        "id": "760468",
+        "stage": "GROUP_STAGE",
+        "group": "E",
+        "utcDate": "2026-06-25T20:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "ECU",
+          "name": "Ecuador",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/ecu.png",
+          "friendId": "rob",
+          "friendName": "Rob",
+          "friendColour": "#8E24AA"
+        },
+        "awayTeam": {
+          "abbr": "GER",
+          "name": "Germany",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/ger.png",
+          "friendId": "jake",
+          "friendName": "Jake",
+          "friendColour": "#455A64"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "MetLife Stadium",
+        "city": "East Rutherford, New Jersey"
+      },
+      {
+        "id": "760471",
+        "stage": "GROUP_STAGE",
+        "group": "F",
+        "utcDate": "2026-06-25T23:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "JPN",
+          "name": "Japan",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/jpn.png",
+          "friendId": "hamish",
+          "friendName": "Hamish",
+          "friendColour": "#C8102E"
+        },
+        "awayTeam": {
+          "abbr": "SWE",
+          "name": "Sweden",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/swe.png",
+          "friendId": "hamish",
+          "friendName": "Hamish",
+          "friendColour": "#C8102E"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "AT&T Stadium",
+        "city": "Arlington, Texas"
+      },
+      {
+        "id": "760472",
+        "stage": "GROUP_STAGE",
+        "group": "F",
+        "utcDate": "2026-06-25T23:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "TUN",
+          "name": "Tunisia",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/tun.png",
+          "friendId": "hamish",
+          "friendName": "Hamish",
+          "friendColour": "#C8102E"
+        },
+        "awayTeam": {
+          "abbr": "NED",
+          "name": "Netherlands",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/ned.png",
+          "friendId": "rob",
+          "friendName": "Rob",
+          "friendColour": "#8E24AA"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "GEHA Field at Arrowhead Stadium",
+        "city": "Kansas City, Missouri"
+      },
+      {
+        "id": "760469",
+        "stage": "GROUP_STAGE",
+        "group": "D",
+        "utcDate": "2026-06-26T02:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "PAR",
+          "name": "Paraguay",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/par.png",
+          "friendId": "ben",
+          "friendName": "Ben",
+          "friendColour": "#0097A7"
+        },
+        "awayTeam": {
+          "abbr": "AUS",
+          "name": "Australia",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/aus.png",
+          "friendId": "ben",
+          "friendName": "Ben",
+          "friendColour": "#0097A7"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Levi's Stadium",
+        "city": "Santa Clara, California"
+      },
+      {
+        "id": "760470",
+        "stage": "GROUP_STAGE",
+        "group": "D",
+        "utcDate": "2026-06-26T02:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "TUR",
+          "name": "Türkiye",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/tur.png",
+          "friendId": "jake",
+          "friendName": "Jake",
+          "friendColour": "#455A64"
+        },
+        "awayTeam": {
+          "abbr": "USA",
+          "name": "United States",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/usa.png",
+          "friendId": "hamish",
+          "friendName": "Hamish",
+          "friendColour": "#C8102E"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "SoFi Stadium",
+        "city": "Inglewood, California"
+      },
+      {
+        "id": "760475",
+        "stage": "GROUP_STAGE",
+        "group": "I",
+        "utcDate": "2026-06-26T19:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "NOR",
+          "name": "Norway",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/nor.png",
+          "friendId": "boris",
+          "friendName": "Boris",
+          "friendColour": "#E6A817"
+        },
+        "awayTeam": {
+          "abbr": "FRA",
+          "name": "France",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/fra.png",
+          "friendId": "tim",
+          "friendName": "Tim",
+          "friendColour": "#1565C0"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Gillette Stadium",
+        "city": "Foxborough, Massachusetts"
+      },
+      {
+        "id": "760474",
+        "stage": "GROUP_STAGE",
+        "group": "I",
+        "utcDate": "2026-06-26T19:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "SEN",
+          "name": "Senegal",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sen.png",
+          "friendId": "ben",
+          "friendName": "Ben",
+          "friendColour": "#0097A7"
+        },
+        "awayTeam": {
+          "abbr": "IRQ",
+          "name": "Iraq",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/irq.png",
+          "friendId": "boomer",
+          "friendName": "Boomer",
+          "friendColour": "#E65100"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "BMO Field",
+        "city": "Toronto"
+      },
+      {
+        "id": "760478",
+        "stage": "GROUP_STAGE",
+        "group": "H",
+        "utcDate": "2026-06-27T00:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "CPV",
+          "name": "Cape Verde",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/cpv.png",
+          "friendId": "dan",
+          "friendName": "Dan",
+          "friendColour": "#00843D"
+        },
+        "awayTeam": {
+          "abbr": "KSA",
+          "name": "Saudi Arabia",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/ksa.png",
+          "friendId": "jake",
+          "friendName": "Jake",
+          "friendColour": "#455A64"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "NRG Stadium",
+        "city": "Houston, Texas"
+      },
+      {
+        "id": "760479",
+        "stage": "GROUP_STAGE",
+        "group": "H",
+        "utcDate": "2026-06-27T00:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "URU",
+          "name": "Uruguay",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/uru.png",
+          "friendId": "boomer",
+          "friendName": "Boomer",
+          "friendColour": "#E65100"
+        },
+        "awayTeam": {
+          "abbr": "ESP",
+          "name": "Spain",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/esp.png",
+          "friendId": "hamish",
+          "friendName": "Hamish",
+          "friendColour": "#C8102E"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Estadio Akron",
+        "city": "Guadalajara"
+      },
+      {
+        "id": "760476",
+        "stage": "GROUP_STAGE",
+        "group": "G",
+        "utcDate": "2026-06-27T03:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "EGY",
+          "name": "Egypt",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/egy.png",
+          "friendId": "dan",
+          "friendName": "Dan",
+          "friendColour": "#00843D"
+        },
+        "awayTeam": {
+          "abbr": "IRN",
+          "name": "Iran",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/irn.png",
+          "friendId": "dan",
+          "friendName": "Dan",
+          "friendColour": "#00843D"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Lumen Field",
+        "city": "Seattle, Washington"
+      },
+      {
+        "id": "760477",
+        "stage": "GROUP_STAGE",
+        "group": "G",
+        "utcDate": "2026-06-27T03:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "NZL",
+          "name": "New Zealand",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/nzl.png",
+          "friendId": "boris",
+          "friendName": "Boris",
+          "friendColour": "#E6A817"
+        },
+        "awayTeam": {
+          "abbr": "BEL",
+          "name": "Belgium",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/bel.png",
+          "friendId": "boris",
+          "friendName": "Boris",
+          "friendColour": "#E6A817"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "BC Place",
+        "city": "Vancouver"
+      },
+      {
+        "id": "760480",
+        "stage": "GROUP_STAGE",
+        "group": "L",
+        "utcDate": "2026-06-27T21:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "CRO",
+          "name": "Croatia",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/cro.png",
+          "friendId": "rob",
+          "friendName": "Rob",
+          "friendColour": "#8E24AA"
+        },
+        "awayTeam": {
+          "abbr": "GHA",
+          "name": "Ghana",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/gha.png",
+          "friendId": "rob",
+          "friendName": "Rob",
+          "friendColour": "#8E24AA"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Lincoln Financial Field",
+        "city": "Philadelphia, Pennsylvania"
+      },
+      {
+        "id": "760485",
+        "stage": "GROUP_STAGE",
+        "group": "L",
+        "utcDate": "2026-06-27T21:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "PAN",
+          "name": "Panama",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/pan.png",
+          "friendId": "boris",
+          "friendName": "Boris",
+          "friendColour": "#E6A817"
+        },
+        "awayTeam": {
+          "abbr": "ENG",
+          "name": "England",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/eng.png",
+          "friendId": "jake",
+          "friendName": "Jake",
+          "friendColour": "#455A64"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "MetLife Stadium",
+        "city": "East Rutherford, New Jersey"
+      },
+      {
+        "id": "760481",
+        "stage": "GROUP_STAGE",
+        "group": "K",
+        "utcDate": "2026-06-27T23:30Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "COL",
+          "name": "Colombia",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/col.png",
+          "friendId": "boris",
+          "friendName": "Boris",
+          "friendColour": "#E6A817"
+        },
+        "awayTeam": {
+          "abbr": "POR",
+          "name": "Portugal",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/por.png",
+          "friendId": "boomer",
+          "friendName": "Boomer",
+          "friendColour": "#E65100"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Hard Rock Stadium",
+        "city": "Miami Gardens, Florida"
+      },
+      {
+        "id": "760482",
+        "stage": "GROUP_STAGE",
+        "group": "K",
+        "utcDate": "2026-06-27T23:30Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "COD",
+          "name": "Congo DR",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/cod.png",
+          "friendId": "ben",
+          "friendName": "Ben",
+          "friendColour": "#0097A7"
+        },
+        "awayTeam": {
+          "abbr": "UZB",
+          "name": "Uzbekistan",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/uzb.png",
+          "friendId": "rob",
+          "friendName": "Rob",
+          "friendColour": "#8E24AA"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Mercedes-Benz Stadium",
+        "city": "Atlanta, Georgia"
+      },
+      {
+        "id": "760484",
+        "stage": "GROUP_STAGE",
+        "group": "J",
+        "utcDate": "2026-06-28T02:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "ALG",
+          "name": "Algeria",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/alg.png",
+          "friendId": "tim",
+          "friendName": "Tim",
+          "friendColour": "#1565C0"
+        },
+        "awayTeam": {
+          "abbr": "AUT",
+          "name": "Austria",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/aut.png",
+          "friendId": "boomer",
+          "friendName": "Boomer",
+          "friendColour": "#E65100"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "GEHA Field at Arrowhead Stadium",
+        "city": "Kansas City, Missouri"
+      },
+      {
+        "id": "760483",
+        "stage": "GROUP_STAGE",
+        "group": "J",
+        "utcDate": "2026-06-28T02:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "JOR",
+          "name": "Jordan",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/jor.png",
+          "friendId": "ben",
+          "friendName": "Ben",
+          "friendColour": "#0097A7"
+        },
+        "awayTeam": {
+          "abbr": "ARG",
+          "name": "Argentina",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/arg.png",
+          "friendId": "tim",
+          "friendName": "Tim",
+          "friendColour": "#1565C0"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "AT&T Stadium",
+        "city": "Arlington, Texas"
+      },
+      {
+        "id": "760486",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-06-28T19:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "2A",
+          "name": "Group A 2nd Place",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/2a.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "2B",
+          "name": "Group B 2nd Place",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/2b.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "SoFi Stadium",
+        "city": "Inglewood, California"
+      },
+      {
+        "id": "760487",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-06-29T17:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "1C",
+          "name": "Group C Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/1c.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "2F",
+          "name": "Group F 2nd Place",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/2f.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "NRG Stadium",
+        "city": "Houston, Texas"
+      },
+      {
+        "id": "760489",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-06-29T20:30Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "1E",
+          "name": "Group E Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/1e.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "3RD",
+          "name": "Third Place Group A/B/C/D/F",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/3rd.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Gillette Stadium",
+        "city": "Foxborough, Massachusetts"
+      },
+      {
+        "id": "760488",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-06-30T01:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "1F",
+          "name": "Group F Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/1f.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "2C",
+          "name": "Group C 2nd Place",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/2c.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Estadio BBVA",
+        "city": "Guadalupe"
+      },
+      {
+        "id": "760490",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-06-30T17:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "2E",
+          "name": "Group E 2nd Place",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/2e.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "2I",
+          "name": "Group I 2nd Place",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/2i.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "AT&T Stadium",
+        "city": "Arlington, Texas"
+      },
+      {
+        "id": "760492",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-06-30T21:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "1I",
+          "name": "Group I Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/1i.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "3RD",
+          "name": "Third Place Group C/D/F/G/H",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/3rd.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "MetLife Stadium",
+        "city": "East Rutherford, New Jersey"
+      },
+      {
+        "id": "760491",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-01T01:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "1A",
+          "name": "Group A Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/1a.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "3RD",
+          "name": "Third Place Group C/E/F/H/I",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/3rd.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Estadio Banorte",
+        "city": "Mexico City"
+      },
+      {
+        "id": "760495",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-01T16:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "1L",
+          "name": "Group L Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/1l.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "3RD",
+          "name": "Third Place Group E/H/I/J/K",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/3rd.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Mercedes-Benz Stadium",
+        "city": "Atlanta, Georgia"
+      },
+      {
+        "id": "760493",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-01T20:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "1G",
+          "name": "Group G Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/1g.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "3RD",
+          "name": "Third Place Group A/E/H/I/J",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/3rd.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Lumen Field",
+        "city": "Seattle, Washington"
+      },
+      {
+        "id": "760494",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-02T00:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "1D",
+          "name": "Group D Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/1d.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "3RD",
+          "name": "Third Place Group B/E/F/I/J",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/3rd.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Levi's Stadium",
+        "city": "Santa Clara, California"
+      },
+      {
+        "id": "760497",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-02T19:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "1H",
+          "name": "Group H Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/1h.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "2J",
+          "name": "Group J 2nd Place",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/2j.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "SoFi Stadium",
+        "city": "Inglewood, California"
+      },
+      {
+        "id": "760496",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-02T23:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "2K",
+          "name": "Group K 2nd Place",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/2k.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "2L",
+          "name": "Group L 2nd Place",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/2l.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "BMO Field",
+        "city": "Toronto"
+      },
+      {
+        "id": "760498",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-03T03:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "1B",
+          "name": "Group B Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/1b.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "3RD",
+          "name": "Third Place Group E/F/G/I/J",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/3rd.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "BC Place",
+        "city": "Vancouver"
+      },
+      {
+        "id": "760499",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-03T18:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "2D",
+          "name": "Group D 2nd Place",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/2d.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "2G",
+          "name": "Group G 2nd Place",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/2g.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "AT&T Stadium",
+        "city": "Arlington, Texas"
+      },
+      {
+        "id": "760500",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-03T22:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "1J",
+          "name": "Group J Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/1j.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "2H",
+          "name": "Group H 2nd Place",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/2h.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Hard Rock Stadium",
+        "city": "Miami Gardens, Florida"
+      },
+      {
+        "id": "760501",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-04T01:30Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "1K",
+          "name": "Group K Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/1k.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "3RD",
+          "name": "Third Place Group D/E/I/J/L",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/3rd.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "GEHA Field at Arrowhead Stadium",
+        "city": "Kansas City, Missouri"
+      },
+      {
+        "id": "760502",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-04T17:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "RD32",
+          "name": "Round of 32 1 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd32.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "RD32",
+          "name": "Round of 32 3 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd32.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "NRG Stadium",
+        "city": "Houston, Texas"
+      },
+      {
+        "id": "760503",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-04T21:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "RD32",
+          "name": "Round of 32 2 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd32.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "RD32",
+          "name": "Round of 32 5 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd32.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Lincoln Financial Field",
+        "city": "Philadelphia, Pennsylvania"
+      },
+      {
+        "id": "760504",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-05T20:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "RD32",
+          "name": "Round of 32 4 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd32.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "RD32",
+          "name": "Round of 32 6 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd32.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "MetLife Stadium",
+        "city": "East Rutherford, New Jersey"
+      },
+      {
+        "id": "760505",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-06T00:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "RD32",
+          "name": "Round of 32 7 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd32.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "RD32",
+          "name": "Round of 32 8 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd32.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Estadio Banorte",
+        "city": "Mexico City"
+      },
+      {
+        "id": "760506",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-06T19:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "RD32",
+          "name": "Round of 32 11 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd32.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "RD32",
+          "name": "Round of 32 12 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd32.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "AT&T Stadium",
+        "city": "Arlington, Texas"
+      },
+      {
+        "id": "760507",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-07T00:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "RD32",
+          "name": "Round of 32 9 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd32.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "RD32",
+          "name": "Round of 32 10 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd32.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Lumen Field",
+        "city": "Seattle, Washington"
+      },
+      {
+        "id": "760509",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-07T16:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "RD32",
+          "name": "Round of 32 14 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd32.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "RD32",
+          "name": "Round of 32 16 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd32.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Mercedes-Benz Stadium",
+        "city": "Atlanta, Georgia"
+      },
+      {
+        "id": "760508",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-07T20:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "RD32",
+          "name": "Round of 32 13 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd32.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "RD32",
+          "name": "Round of 32 15 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd32.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "BC Place",
+        "city": "Vancouver"
+      },
+      {
+        "id": "760510",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-09T20:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "RD16 W1",
+          "name": "Round of 16 1 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd16 w1.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "RD16 W2",
+          "name": "Round of 16 2 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd16 w2.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Gillette Stadium",
+        "city": "Foxborough, Massachusetts"
+      },
+      {
+        "id": "760511",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-10T19:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "RD16 W5",
+          "name": "Round of 16 5 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd16 w5.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "RD16 W6",
+          "name": "Round of 16 6 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd16 w6.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "SoFi Stadium",
+        "city": "Inglewood, California"
+      },
+      {
+        "id": "760512",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-11T21:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "RD16 W3",
+          "name": "Round of 16 3 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd16 w3.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "RD16 W4",
+          "name": "Round of 16 4 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd16 w4.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Hard Rock Stadium",
+        "city": "Miami Gardens, Florida"
+      },
+      {
+        "id": "760513",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-12T01:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "RD16 W7",
+          "name": "Round of 16 7 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd16 w7.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "RD16 W8",
+          "name": "Round of 16 8 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/rd16 w8.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "GEHA Field at Arrowhead Stadium",
+        "city": "Kansas City, Missouri"
+      },
+      {
+        "id": "760514",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-14T19:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "QFW1",
+          "name": "Quarterfinal 1 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/qfw1.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "QFW2",
+          "name": "Quarterfinal 2 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/qfw2.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "AT&T Stadium",
+        "city": "Arlington, Texas"
+      },
+      {
+        "id": "760515",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-15T19:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "QFW3",
+          "name": "Quarterfinal 3 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/qfw3.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "QW4",
+          "name": "Quarterfinal 4 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/qw4.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Mercedes-Benz Stadium",
+        "city": "Atlanta, Georgia"
+      },
+      {
+        "id": "760516",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-18T21:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "SF L1",
+          "name": "Semifinal 1 Loser",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sf l1.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "SF L2",
+          "name": "Semifinal 2 Loser",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sf l2.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "Hard Rock Stadium",
+        "city": "Miami Gardens, Florida"
+      },
+      {
+        "id": "760517",
+        "stage": "GROUP_STAGE",
+        "utcDate": "2026-07-19T19:00Z",
+        "status": "STATUS_SCHEDULED",
+        "minute": "Scheduled",
+        "homeTeam": {
+          "abbr": "SFW1",
+          "name": "Semifinal 1 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sfw1.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "awayTeam": {
+          "abbr": "SFW2",
+          "name": "Semifinal 2 Winner",
+          "logo": "https://a.espncdn.com/i/teamlogos/countries/500/sfw2.png",
+          "friendId": "unknown",
+          "friendName": "?",
+          "friendColour": "#999"
+        },
+        "score": {
+          "home": 0,
+          "away": 0
+        },
+        "venue": "MetLife Stadium",
+        "city": "East Rutherford, New Jersey"
+      }
+    ],
+    "lastUpdated": "2026-06-20T23:30:32.357Z"
+  }
+}

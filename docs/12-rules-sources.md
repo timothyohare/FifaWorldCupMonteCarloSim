@@ -27,11 +27,13 @@ fixture so the bracket mapping is auditable.
 [ESPN — format, tiebreakers, schedule](https://www.espn.com/soccer/story/_/id/47108758/2026-fifa-world-cup-format-tiebreakers-fixtures-schedule) ·
 [Al Jazeera — explained in maps & charts](https://www.aljazeera.com/sports/2026/6/10/fifa-world-cup-2026-explained-in-maps-and-charts).
 
-> **Open item:** obtain the exact third-place→slot table from the regulations PDF. The
-> allocation depends on the *set* of qualifying groups: **495 pre-defined scenarios**
-> (C(12,8)). Confirmed structure (2026-06-20): winners of groups **A, C, D, E, G, I, K, L**
-> face a third-placed team; winners of **B, F, H, J** face runners-up. Only the 495 row
-> *values* still need the PDF. Pin them before trusting `KnockoutEngine`.
+> **Open item:** transcribe the exact third-place→slot table from **Annex C** of the official
+> regulations. The allocation depends on the *set* of qualifying groups: **495 pre-defined
+> scenarios** (C(12,8)). Confirmed structure (2026-06-20): winners of groups **A, C, D, E, G,
+> I, K, L** face a third-placed team; winners of **B, F, H, J** face runners-up. Only the 495
+> row *values* still need the PDF. Pin them before trusting `KnockoutEngine`.
+> **Source PDF (verified):** FIFA World Cup 26™ Competition Regulations, Annex C —
+> <https://digitalhub.fifa.com/m/636f5c9c6f29771f/original/FWC2026_regulations_EN.pdf>
 
 ## Q3 — Exact group tiebreaker ordering
 

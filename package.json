@@ -1,9 +1,12 @@
 {
-  "name": "wc-montecarlo-spikes",
+  "name": "wc-montecarlo-sim",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "description": "Throwaway exploratory spikes for the World Cup Monte Carlo simulator (planning stage).",
+  "description": "FIFA World Cup 2026 Monte Carlo simulator — current standings to title odds.",
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "scripts": {
     "typecheck": "tsc --noEmit",
     "lint": "tsc --noEmit",
@@ -16,5 +19,8 @@
     "tsx": "^4.7.0",
     "typescript": "^5.4.0",
     "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.105.0"
   }
 }

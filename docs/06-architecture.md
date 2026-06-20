@@ -131,3 +131,29 @@ offline and off the critical path. Final call deferred to open questions.
 - New output (web widget, kickpool embed) = new consumer of the same `ResultSet` JSON.
 - Parallelism = shard N across workers/cores; trivially additive because sims are
   independent.
+
+## 8. Implementation status (2026-06-20)
+
+The core architecture above is now implemented in `src/`, test-first (83 tests, `gate-ci`
+green):
+
+| Component | Module | Status |
+|-----------|--------|--------|
+| StrengthModel seam | [`src/model/strength-model.ts`](../src/model/strength-model.ts) | ✅ |
+| EloPoissonModel (calibrated) | [`src/model/elo-poisson.ts`](../src/model/elo-poisson.ts) | ✅ beats baseline 18.6% |
+| GroupEngine + tiebreakers | [`src/engine/standings.ts`](../src/engine/standings.ts), [`group-engine.ts`](../src/engine/group-engine.ts) | ✅ |
+| KnockoutEngine | [`knockout.ts`](../src/engine/knockout.ts) (resolver) · [`bracket-2026.ts`](../src/engine/bracket-2026.ts) + [`annex-c.ts`](../src/engine/annex-c.ts) | ✅ **official 2026 bracket** (§12.6–12.11 + Annex C 495 rows) |
+| Aggregator / full run | [`simulate.ts`](../src/engine/simulate.ts), [`tournament.ts`](../src/engine/tournament.ts) | ✅ champion/runner-up/final/semi/escape + MoE |
+| DataProvider | [`snapshot.ts`](../src/io/snapshot.ts) · [`kickpool-provider.ts`](../src/io/kickpool-provider.ts) | ✅ SnapshotProvider + **live KickpoolApiProvider** |
+| Calibration backtest | [`src/eval/`](../src/eval/) | ✅ C3 gate passes |
+| Gen-AI narrator | [`src/narrate/`](../src/narrate/) | ✅ live (Anthropic) + number guardrail |
+| CLI | [`src/cli.ts`](../src/cli.ts) | ✅ shows winner + runner-up |
+| ClaudeAdapterModel (precomputed kickpool predictions) | — | ⏳ not yet built |
+
+The bracket now follows the official Regulations exactly. The generic placeholder seeding in
+`knockout.ts` remains only for non-12-group test tournaments. The live provider has been run
+end-to-end against kickpool's own server (Node ≥20.9): `KickpoolApiProvider` →
+`fromKickpoolSnapshot` → full sim → champion & runner-up odds. (kickpool labels every fixture
+`GROUP_STAGE` and includes knockout placeholders like `2A`/`W73`, so the adapter selects group
+matches by team-membership, not the stage label.) Remaining nice-to-have: the Claude strength
+adapter as a selectable model.

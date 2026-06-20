@@ -60,11 +60,20 @@ planning artifacts below are reviewed and the open questions in
 - [x] Snapshot adapter (kickpool JSON → input) — [`src/io/snapshot.ts`](src/io/snapshot.ts).
 - [x] CLI (`npm run sim`) — runs end-to-end, 100k group-stage sims in ~1.3s.
 - [x] Acquire historical dataset — `data/results.csv` (martj42, CC0; see [`data/README.md`](data/README.md)).
-- [ ] KnockoutEngine — blocked on the FIFA 495-scenario Annex table (winners A,C,D,E,G,I,K,L
-      face thirds; values pending the regulations PDF).
-- [ ] Calibrate strength-model constants on `data/results.csv` via the S8 harness.
-- [ ] Wire the live Gen-AI narrator (S7) — key now available.
-- [ ] Promote remaining spikes (S6 mechanism, S8 harness) into `src/` as they unblock.
+- [x] KnockoutEngine — two-stage resolver [`knockout.ts`](src/engine/knockout.ts) + the
+      **official 2026 bracket** [`bracket-2026.ts`](src/engine/bracket-2026.ts) (§12.6–12.11).
+- [x] Transcribe the FIFA **Annex C** 495-scenario table — [`scripts/gen-annex-c.ts`](scripts/gen-annex-c.ts)
+      → [`src/engine/annex-c.ts`](src/engine/annex-c.ts) (each row validated against §12.6).
+- [x] Full-tournament runner → **champion & runner-up** + final/semi/escape — [`src/engine/tournament.ts`](src/engine/tournament.ts).
+- [x] Calibrate strength-model constants on `data/results.csv` — [`src/eval/`](src/eval/).
+      base 1.35 / homeAdv 95 / spread 0.8; **beats coin-flip by 18.6%** (M1 gate PASS).
+- [x] Live data provider (`/api/standings` + `/api/fixtures`) — [`src/io/kickpool-provider.ts`](src/io/kickpool-provider.ts).
+- [x] Real 48-team snapshot + Elo ratings — [`scripts/fetch-wc-snapshot.ts`](scripts/fetch-wc-snapshot.ts),
+      [`scripts/build-ratings.ts`](scripts/build-ratings.ts) → [`fixtures/wc2026-*.json`](fixtures/).
+- [x] Live Gen-AI narrator (S7) — [`src/narrate/`](src/narrate/) (real Anthropic call + guardrail).
+- [x] CLI shows winner + runner-up — `npm run sim -- --snapshot fixtures/wc2026-snapshot.json --ratings fixtures/wc2026-ratings.json`.
+- [ ] ClaudeAdapterModel (precomputed kickpool predictions as a selectable model).
+- [ ] Run against kickpool's own server once on Node ≥20.9 (provider is ready).
 
 ## Exit criteria for the planning stage
 1. Method comparison reviewed and Monte Carlo confirmed (or an alternative chosen).

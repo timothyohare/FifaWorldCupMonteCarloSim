@@ -8,5 +8,7 @@ dist/
 .env.*
 !.env.example
 
-# Large third-party datasets — fetched via data/README.md, not committed
-data/*.csv
+# Fetched / derived data artifacts — reproducible via scripts + data/README.md, not committed
+# (the official PDF, extracted text, raw ESPN dumps, the 3.6MB results CSV…)
+data/*
+!data/README.md

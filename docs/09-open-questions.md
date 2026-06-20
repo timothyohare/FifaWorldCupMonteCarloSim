@@ -3,6 +3,11 @@
 Status: `OPEN` needs a decision · `LEANING` provisional recommendation · `RESOLVED` decided.
 **Blocking** questions must be resolved before build starts.
 
+> **M1 hard gate — RESULT (2026-06-20): PASS.** The calibrated Elo/Poisson model beats the
+> coin-flip baseline by **18.6%** on log loss over 16k post-2010 internationals (11% on World
+> Cup matches). The "kill if it can't beat coin-flip" condition is cleared. See
+> [`13-spike-findings.md`](13-spike-findings.md) (S8).
+
 ## Blocking (resolve before coding)
 
 ### Q1 — What is the default strength model (Layer A)? **[BLOCKING]**

@@ -5,9 +5,13 @@ team still in the tournament, the probability that they win the whole thing — 
 the rest of the tournament tens of thousands of times under FIFA's real rules and counting
 how often each team lifts the trophy.
 
-> **Status: planning stage.** This repository currently contains design documents only. No
-> production code has been written yet. The plan is to lock the design (and resolve the
-> [open questions](docs/09-open-questions.md)) before implementation begins.
+> **Status: working end-to-end on the real 2026 tournament.** A test-first TypeScript engine
+> runs the full tournament — group stage → FIFA tiebreakers → qualifiers → the **official 2026
+> knockout bracket** (Regulations §12.6–12.11 + the transcribed **Annex C** 495-scenario
+> third-place table) → **champion & runner-up odds**. The strength model is **calibrated** on
+> 49k historical internationals (beats coin-flip by ~18%). It runs on a **real 48-team
+> snapshot** pulled from live data, and a post-run **Gen-AI narrator** explains the movers.
+> Latest run (current standings): Argentina ~20% to win, Spain ~14%, France ~11%.
 
 ## What it does
 
@@ -34,6 +38,50 @@ models are planned:
 The real engineering risk is the **calibration of the strength model**, not the simulation
 machinery — which is why verification centres on calibration and log-loss against a
 coin-flip baseline.
+
+## Running it
+
+```bash
+npm install
+npm test                       # 96 tests (engine + eval + io + narrate + spikes)
+npm run typecheck
+
+# Title odds for the REAL 2026 tournament (committed snapshot + Elo ratings):
+npm run sim -- --snapshot fixtures/wc2026-snapshot.json --ratings fixtures/wc2026-ratings.json
+
+# Refresh from a running kickpool instance (the live provider path; needs Node >=20.9):
+npx tsx scripts/fetch-from-kickpool.ts http://localhost:3000   # via KickpoolApiProvider
+#   …or pull the same upstream directly when kickpool isn't running:
+npx tsx scripts/fetch-wc-snapshot.ts   # live ESPN fifa.world → fixtures/wc2026-snapshot.json
+npx tsx scripts/build-ratings.ts       # Elo from data/results.csv → fixtures/wc2026-ratings.json
+
+# Explain how the odds moved (post-run Gen-AI narrator, needs ANTHROPIC_API_KEY in .env):
+npx tsx scripts/narrate-demo.ts
+
+# Re-calibrate the Elo→Poisson constants against history (needs data/results.csv):
+npx tsx src/eval/calibrate.ts
+
+# Re-transcribe Annex C from the FIFA Regulations PDF:
+npx tsx scripts/gen-annex-c.ts
+```
+
+Live data (a running kickpool on Node ≥20) flows in via `src/io/kickpool-provider.ts`
+(`fetchTournamentInput`). Offline, the committed `fixtures/wc2026-*.json` reproduce the run.
+
+The simulator is reproducible: identical `(snapshot, ratings, seed, sims)` ⇒ identical odds.
+
+### `src/` layout
+
+| Path | Role |
+|------|------|
+| [src/domain/](src/domain/) | Core types + deterministic RNG |
+| [src/model/](src/model/) | `StrengthModel` seam + calibrated `EloPoissonModel` |
+| [src/engine/](src/engine/) | standings/tiebreakers, group engine, **2026 bracket (Annex C)**, full-tournament runner |
+| [src/eval/](src/eval/) | Elo ratings, backtest, calibration (the C3 gate) |
+| [src/io/](src/io/) | kickpool snapshot adapter + **live API provider** |
+| [src/narrate/](src/narrate/) | post-run Gen-AI narrator + guardrail |
+| [src/cli.ts](src/cli.ts) | command-line entry point |
+| [scripts/](scripts/) | data capture (snapshot, ratings), Annex C generator, narrator demo |
 
 ## Documentation
 

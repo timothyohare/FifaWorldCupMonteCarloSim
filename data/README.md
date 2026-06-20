@@ -24,11 +24,21 @@ curl -fsSL https://raw.githubusercontent.com/martj42/international_results/maste
 
 Fetched 2026-06-20: 49,478 rows (incl. header), 3.6 MB.
 
-## FIFA 2026 third-place → R32 allocation table (S6) — NOT YET ACQUIRED
+## FIFA 2026 third-place → R32 allocation table (S6) — TRANSCRIBED ✓
 
-The bracket allocation for the 8 best third-placed teams is **495 pre-defined scenarios**
-(one per combination of 8 qualifying groups from 12), published in the **FIFA 2026
-Regulations PDF**. Confirmed structure: the group winners who face a third-placed team are
-**A, C, D, E, G, I, K, L** (winners of B, F, H, J face runners-up). The full 495-row table is
-too large to scrape reliably — obtain the official PDF/Annex and commit the transcribed
-table as a fixture. Tracked in [`../docs/13-spike-findings.md`](../docs/13-spike-findings.md) (S6).
+Transcribed and shipped: [`scripts/gen-annex-c.ts`](../scripts/gen-annex-c.ts) downloads the
+PDF, runs `pdftotext`, parses **Annex C**, and writes the validated 495-row table to
+[`../src/engine/annex-c.ts`](../src/engine/annex-c.ts). The bracket allocation for the 8 best
+third-placed teams is **495 pre-defined scenarios** (one per combination of 8 qualifying
+groups from 12), published as **Annex C** of the official **FIFA World Cup 26™ Competition
+Regulations**:
+
+- **PDF (verified 2026-06-20, ~936 KB):**
+  <https://digitalhub.fifa.com/m/636f5c9c6f29771f/original/FWC2026_regulations_EN.pdf>
+  (landing: <https://inside.fifa.com/organisation/fifa-council/news/council-update-regulations-world-cup-2026>)
+
+Confirmed structure: the group winners who face a third-placed team are **A, C, D, E, G, I,
+K, L** (winners of B, F, H, J face runners-up). The full 495-row Annex C table is too large
+to scrape reliably — transcribe it from the PDF and commit it as a fixture to replace the
+placeholder seeding in `src/engine/knockout.ts`. Tracked in
+[`../docs/13-spike-findings.md`](../docs/13-spike-findings.md) (S6).

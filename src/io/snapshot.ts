@@ -35,12 +35,12 @@ export function fromKickpoolSnapshot(
   const byLetter = new Map(groups.map((g) => [g.group, g]));
 
   for (const mt of snapshot.fixtures.matches) {
-    if (mt.stage !== "GROUP_STAGE") continue;
     const home = mt.homeTeam.abbr;
     const away = mt.awayTeam.abbr;
-    for (const t of [home, away]) {
-      if (!membership.has(t)) throw new SnapshotError(`Match ${mt.id}: team ${t} is not in any group`);
-    }
+    // Skip non-group fixtures. Some sources (e.g. kickpool) label every match GROUP_STAGE and
+    // include knockout fixtures with placeholder teams ("2A", "W73"); a real group match always
+    // has both teams in a group's standings, so membership — not the stage label — is the test.
+    if (mt.stage !== "GROUP_STAGE" || !membership.has(home) || !membership.has(away)) continue;
     const groupLetter = mt.group ?? membership.get(home)!;
     if (membership.get(home) !== groupLetter || membership.get(away) !== groupLetter) {
       throw new SnapshotError(`Match ${mt.id}: declared group ${mt.group} disagrees with standings`);

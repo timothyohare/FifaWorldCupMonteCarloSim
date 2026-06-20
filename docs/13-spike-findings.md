@@ -118,9 +118,17 @@ concrete remaining data task.
 **Update (2026-06-20 research):** confirmed the mapping is **495 pre-defined scenarios**
 (C(12,8) — one per combination of 8 qualifying groups from 12). The group winners who face a
 third-placed team are **A, C, D, E, G, I, K, L**; winners of **B, F, H, J** face runners-up
-instead. This structure is encoded-able now; only the 495 row *values* still need the FIFA
-PDF. Sources: [FIFA regs via Sportmonks](https://www.sportmonks.com/blogs/world-cup-2026-round-of-32-and-knockouts-how-to-build-world-cup-brackets/),
-[ESPN schedule/bracket](https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket).
+instead. This structure is encoded-able now; only the 495 row *values* still need transcribing from
+**Annex C** of the official **FIFA World Cup 26™ Competition Regulations** (PDF, verified
+2026-06-20): <https://digitalhub.fifa.com/m/636f5c9c6f29771f/original/FWC2026_regulations_EN.pdf>.
+
+**Update (2026-06-20 — TRANSCRIBED & SHIPPED).** The full bracket is now official, not a
+placeholder. [`scripts/gen-annex-c.ts`](../scripts/gen-annex-c.ts) parses the PDF text and
+emits [`src/engine/annex-c.ts`](../src/engine/annex-c.ts) — all **495 combinations**, each
+**self-validated** against the §12.6 candidate sets (the generator throws on any mismatch).
+The fixed slot tree (R32 M73–M88 → R16 → QF → SF → Final, §12.6–12.11) and Annex C are wired
+into [`src/engine/bracket-2026.ts`](../src/engine/bracket-2026.ts) and used automatically for
+the 12-group format. The generic placeholder seeding survives only for small test tournaments.
 
 ## S7 — Gen-AI narrator ([`spikes/s7-narrator.ts`](../spikes/s7-narrator.ts))
 
@@ -133,7 +141,13 @@ Computes top champion-odds movers between two runs, builds a prompt whose system
 - This gives a concrete safety mechanism for FR18: every `%` in the prose must trace to a
   supplied number, enforcing the "storytelling never contaminates the numbers" rule.
 - **Live execution needs `@anthropic-ai/sdk` + `ANTHROPIC_API_KEY`** (claude-haiku-4-5 is
-  sufficient for narration). Not exercised here to keep the spike offline/credential-free.
+  sufficient for narration). Not exercised in the spike to keep it offline/credential-free.
+
+**Update (2026-06-20 — WIRED LIVE).** Promoted to [`src/narrate/`](../src/narrate/):
+`narrator.ts` (movers + prompt + guardrail) and `anthropic-client.ts` (live SDK call,
+claude-haiku-4-5). [`scripts/narrate-demo.ts`](../scripts/narrate-demo.ts) compares
+pre-tournament vs current-standings odds and asks Claude to explain the movers — a real call
+succeeds and the guardrail passes (no fabricated numbers). Unit tests use a mock client.
 
 ## S8 — Backtest harness ([`spikes/s8-backtest.ts`](../spikes/s8-backtest.ts))
 
@@ -147,8 +161,21 @@ baseline. On a synthetic 4,000-match set drawn from known probabilities:
 
 **Finding:** the **C3 kill/pivot gate is buildable and the math is correct** — a calibrated
 predictor beats uniform on both metrics, and the baseline lands exactly on ln 3 as it should.
-The real gate just swaps the synthetic set for martj42 historical results replayed from past
-tournaments (Q7). Build this early so the engine is judged against calibration from day one.
+
+**Update (2026-06-20 — REAL calibration run).** The harness is now promoted to `src/eval/`
+(`scoring`, `elo-ratings`, `backtest`, `calibrate`) and run against the acquired
+`data/results.csv` (49,437 completed internationals). A walk-forward backtest (evolve Elo
+match-by-match; predict each post-2010 match from pre-match ratings) grid-searched the
+Elo→Poisson constants:
+
+| Metric | Calibrated (base 1.35, homeAdv 95, spread 0.8) | Coin-flip baseline |
+|--------|-----------------------------------------------:|-------------------:|
+| Log loss (all, n≈16k) | **0.894** | 1.099 (ln 3) |
+| Log loss (World Cup only, n=288) | **0.978** | 1.099 |
+
+**The engine beats the coin-flip baseline by 18.6% (11.0% on World Cup matches) — the M1
+hard gate passes, the project is not a kill.** These constants are now the
+`EloPoissonModel` defaults.
 
 ---
 
@@ -156,11 +183,13 @@ tournaments (Q7). Build this early so the engine is judged against calibration f
 
 | Item | Blocked on | Spike | Status |
 |------|-----------|-------|--------|
-| Official third-place→slot table (495 rows) | FIFA Regulations PDF (Annex) | S6 | ⏳ structure known, values pending |
-| Strength-model constants (`base/homeAdv/spread`, shootout tilt) | historical calibration run | S3, S1, S8 | ⏳ data in hand, run pending |
-| Real calibration verdict (beat coin-flip?) | martj42 dataset + rewind harness | S8 | ✅ dataset acquired (`data/results.csv`) |
-| Live narrative | `ANTHROPIC_API_KEY` + `@anthropic-ai/sdk` | S7 | ✅ key available (unblocked) |
+| Official third-place→slot table (495 rows) | FIFA Regulations PDF (Annex C) | S6 | ✅ **transcribed & shipped** (`src/engine/annex-c.ts`) |
+| Strength-model constants | historical calibration run | S3, S1, S8 | ✅ calibrated & applied as defaults |
+| Real calibration verdict (beat coin-flip?) | martj42 dataset + rewind harness | S8 | ✅ **passes — 18.6% better than baseline** |
+| Live narrative | `ANTHROPIC_API_KEY` + `@anthropic-ai/sdk` | S7 | ✅ **wired live** (`src/narrate/`) |
 
-Everything else (rule logic, data adapter, perf, reproducibility, scoring math) is validated
-and **has begun graduating from spike to engine** — see `src/` (group-stage pipeline + CLI,
-built test-first).
+The engine is a real, test-first `src/` implementation running the **official 2026 tournament**
+end-to-end on a live-captured 48-team snapshot: group → tiebreakers → Annex C knockout →
+champion & runner-up odds, calibrated model, live data provider, and a Gen-AI narrator.
+Remaining nice-to-haves: the Claude strength adapter, and running kickpool's own server
+(needs Node ≥20.9).

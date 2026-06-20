@@ -19,4 +19,9 @@ export interface StrengthModel {
   matchOutcome(home: TeamId, away: TeamId): Outcome;
   /** Sample a concrete scoreline (needed for goal-difference tiebreakers). */
   sampleScore(home: TeamId, away: TeamId, rng: Rng): Score;
+  /**
+   * Cheap P(home beats away) ignoring draws — used to tilt a knockout shootout.
+   * Optional: resolvers fall back to a coin flip when absent.
+   */
+  winProbability?(home: TeamId, away: TeamId): number;
 }

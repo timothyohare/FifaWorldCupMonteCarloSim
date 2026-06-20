@@ -8,21 +8,37 @@ A repeatable Monte Carlo simulator that estimates each team's probability of win
 FIFA World Cup from the **current** standings, re-runnable at any point during the
 tournament. See [README.md](README.md) and [docs/README.md](docs/README.md).
 
-## Current state: planning + de-risking spikes
+## Current state: working end-to-end on the real 2026 tournament, test-first
 
-**No production engine exists yet** — the deliverable so far is design documents plus a set
-of **throwaway spikes** under [spikes/](spikes/) that de-risk specific assumptions (see
-[docs/13-spike-findings.md](docs/13-spike-findings.md)). Per [TODO.md](TODO.md), the real
-engine should not be built until the planning artifacts are signed off and the
-[open questions](docs/09-open-questions.md) are resolved. The spikes are validation
-prototypes, **not** the architecture — do not treat them as the engine or extend them into
-one without being asked.
+A real TypeScript engine in [src/](src/) runs the full tournament — group stage → FIFA
+tiebreakers → qualifiers → the **official 2026 knockout bracket** (§12.6–12.11 + the
+transcribed **Annex C** 495-scenario table) → **champion & runner-up odds** — via a CLI
+(`npm run sim`). Calibrated on historical data (beats coin-flip ~18%), runs on a real
+48-team snapshot, with a live Gen-AI narrator. Test-first; 96 tests; `gate-ci` green.
+
+- `src/domain/` types+RNG · `src/model/` strength model · `src/engine/` rules + 2026 bracket
+  (`bracket-2026.ts` + generated `annex-c.ts`) + runners · `src/eval/` calibration ·
+  `src/io/` snapshot adapter + live `kickpool-provider.ts` · `src/narrate/` Gen-AI narrator ·
+  `src/cli.ts`. `scripts/` holds data-capture + the Annex C generator (re-run, don't hand-edit
+  `annex-c.ts`).
+- [spikes/](spikes/) are the earlier **throwaway** prototypes; the engine has superseded them.
+  Don't extend a spike when the `src/` equivalent exists.
+- **Node note:** kickpool's Next 16 server needs Node ≥20.9. The default *non-interactive*
+  shell here is Node 18.19, but Node 24 is available at
+  `~/.nvm/versions/node/v24.15.0/bin/node` — prefix PATH with it to run kickpool. The live
+  path has been exercised: `scripts/fetch-from-kickpool.ts` captures via `kickpool-provider.ts`
+  against a running kickpool; `scripts/fetch-wc-snapshot.ts` is the direct-ESPN fallback.
+- kickpool tags every fixture `GROUP_STAGE` and includes knockout placeholders (`2A`, `W73`),
+  so `fromKickpoolSnapshot` selects group matches by **team membership**, not the stage label.
 
 ## Where things live
 
+- `src/` — the engine (domain, model, engine, eval, io, cli). Test-first; the real codebase.
 - `docs/` — numbered design documents (`01`–`13`); read order in [docs/README.md](docs/README.md).
 - `spikes/` — runnable throwaway spikes (TypeScript); see [spikes/README.md](spikes/README.md).
-- `TODO.md` — planning-stage checklist and status.
+- `data/` — external datasets (gitignored CSVs); provenance in [data/README.md](data/README.md).
+- `fixtures/` — sample snapshot + ratings for the CLI.
+- `TODO.md` — checklist and status.
 - Root `README.md` / `CLAUDE.md` — project overview and this file.
 - **kickpool** (`../kickpool`, i.e. `/home/timohare/dev/newdev/kickpool`) — the existing
   upstream project this tool consumes data from. A separate Next.js codebase; reuse its
@@ -61,8 +77,10 @@ The spikes use a minimal TypeScript setup (ESM, Node ≥18, no framework):
 ```bash
 npm install
 npm run typecheck   # tsc --noEmit
-npm test            # vitest (40 tests across the 8 spikes)
-npm run report      # prints the demo findings captured in docs/13-spike-findings.md
+npm test            # vitest (engine + spikes)
+npm run sim -- --snapshot fixtures/sample-snapshot.json --ratings fixtures/sample-ratings.json --best-thirds 0
+npx tsx src/eval/calibrate.ts   # re-run the calibration backtest (needs data/results.csv)
+npm run report      # prints the spike demo findings
 ```
 
 `.claude/harness.json` binds `lint`/`typecheck` to these npm scripts, so the global

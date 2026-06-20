@@ -4,7 +4,7 @@
 //                  [--sims 100000] [--seed 1] [--best-thirds 8] [--home-adv 0]
 import { readFileSync } from "node:fs";
 import { EloPoissonModel } from "./model/elo-poisson";
-import { runGroupStage } from "./engine/simulate";
+import { runTournament } from "./engine/tournament";
 import { fromKickpoolSnapshot, type KickpoolSnapshot } from "./io/snapshot";
 import type { TeamId } from "./domain/types";
 
@@ -63,18 +63,21 @@ function main(): void {
   const model = new EloPoissonModel(loadRatings(args.ratings, teamIds), { homeAdvantage: args.homeAdv });
 
   const started = performance.now();
-  const rs = runGroupStage(input, model, { sims: args.sims, seed: args.seed });
+  const rs = runTournament(input, model, { sims: args.sims, seed: args.seed });
   const ms = performance.now() - started;
 
-  console.log(`\nWorld Cup — group-stage odds  (${args.sims.toLocaleString()} sims, seed ${args.seed})\n`);
-  console.log("  #  Team   Grp   Win group   Escape group");
-  console.log("  ─────────────────────────────────────────────────");
+  console.log(`\nWorld Cup — title odds  (${args.sims.toLocaleString()} sims, seed ${args.seed}, ${rs.metadata.bracket} bracket)\n`);
+  console.log("  #  Team   Grp    Champion      Runner-up    Final    Semi   Escape");
+  console.log("  ──────────────────────────────────────────────────────────────────────");
   rs.teams.forEach((t, i) => {
     const rank = String(i + 1).padStart(3);
     const team = t.team.padEnd(5);
-    const win = pct(t.winGroup).padStart(7);
-    const esc = `${pct(t.escapeGroup)} ± ${pct(t.escapeMoE)}`.padStart(14);
-    console.log(`  ${rank}  ${team}   ${t.group}   ${win}      ${esc}`);
+    const champ = `${pct(t.champion)} ± ${pct(t.championMoE)}`.padStart(13);
+    const run = `${pct(t.runnerUp)}`.padStart(7);
+    const fin = pct(t.reachFinal).padStart(7);
+    const semi = pct(t.reachSemi).padStart(7);
+    const esc = pct(t.escapeGroup).padStart(7);
+    console.log(`  ${rank}  ${team}   ${t.group}   ${champ}   ${run}  ${fin}  ${semi}  ${esc}`);
   });
   console.log(`\n  ${rs.teams.length} teams · best-${rs.metadata.bestThirds} thirds advance · ${ms.toFixed(0)}ms\n`);
 }
