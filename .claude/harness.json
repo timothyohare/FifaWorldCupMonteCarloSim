@@ -1,0 +1,4 @@
+{
+  "lint": "npm run -s lint",
+  "typecheck": "npm run -s typecheck"
+}

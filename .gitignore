@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Large third-party datasets — fetched via data/README.md, not committed
+data/*.csv

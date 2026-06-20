@@ -1,0 +1,43 @@
+{
+  "_note": "Sample kickpool API snapshot for the S4 adapter spike. 2 groups; Group A fully played, Group B partly played. Mirrors /api/standings and /api/fixtures response shapes.",
+  "standings": {
+    "lastUpdated": "2026-06-20T12:00:00.000Z",
+    "groups": [
+      {
+        "group": "A",
+        "table": [
+          { "team": { "abbr": "BRA", "name": "Brazil", "logo": "", "friendId": "f1", "friendName": "Sam", "friendColour": "#1b9e77" } },
+          { "team": { "abbr": "SUI", "name": "Switzerland", "logo": "", "friendId": "f2", "friendName": "Lee", "friendColour": "#d95f02" } },
+          { "team": { "abbr": "SRB", "name": "Serbia", "logo": "", "friendId": "f3", "friendName": "Ana", "friendColour": "#7570b3" } },
+          { "team": { "abbr": "CMR", "name": "Cameroon", "logo": "", "friendId": "f4", "friendName": "Mo", "friendColour": "#e7298a" } }
+        ]
+      },
+      {
+        "group": "B",
+        "table": [
+          { "team": { "abbr": "ARG", "name": "Argentina", "logo": "", "friendId": "f1", "friendName": "Sam", "friendColour": "#1b9e77" } },
+          { "team": { "abbr": "MEX", "name": "Mexico", "logo": "", "friendId": "f2", "friendName": "Lee", "friendColour": "#d95f02" } },
+          { "team": { "abbr": "POL", "name": "Poland", "logo": "", "friendId": "f3", "friendName": "Ana", "friendColour": "#7570b3" } },
+          { "team": { "abbr": "KSA", "name": "Saudi Arabia", "logo": "", "friendId": "f4", "friendName": "Mo", "friendColour": "#e7298a" } }
+        ]
+      }
+    ]
+  },
+  "fixtures": {
+    "lastUpdated": "2026-06-20T12:00:00.000Z",
+    "matches": [
+      { "id": "A1", "stage": "GROUP_STAGE", "group": "A", "utcDate": "2026-06-12T16:00Z", "status": "STATUS_FINAL", "homeTeam": { "abbr": "BRA", "name": "Brazil", "logo": "", "friendId": "f1", "friendName": "Sam", "friendColour": "#1b9e77" }, "awayTeam": { "abbr": "SRB", "name": "Serbia", "logo": "", "friendId": "f3", "friendName": "Ana", "friendColour": "#7570b3" }, "score": { "home": 2, "away": 0 }, "venue": "Stadium", "city": "City" },
+      { "id": "A2", "stage": "GROUP_STAGE", "group": "A", "utcDate": "2026-06-12T19:00Z", "status": "STATUS_FINAL", "homeTeam": { "abbr": "BRA", "name": "Brazil", "logo": "", "friendId": "f1", "friendName": "Sam", "friendColour": "#1b9e77" }, "awayTeam": { "abbr": "SUI", "name": "Switzerland", "logo": "", "friendId": "f2", "friendName": "Lee", "friendColour": "#d95f02" }, "score": { "home": 1, "away": 0 }, "venue": "Stadium", "city": "City" },
+      { "id": "A3", "stage": "GROUP_STAGE", "group": "A", "utcDate": "2026-06-13T16:00Z", "status": "STATUS_FINAL", "homeTeam": { "abbr": "BRA", "name": "Brazil", "logo": "", "friendId": "f1", "friendName": "Sam", "friendColour": "#1b9e77" }, "awayTeam": { "abbr": "CMR", "name": "Cameroon", "logo": "", "friendId": "f4", "friendName": "Mo", "friendColour": "#e7298a" }, "score": { "home": 1, "away": 0 }, "venue": "Stadium", "city": "City" },
+      { "id": "A4", "stage": "GROUP_STAGE", "group": "A", "utcDate": "2026-06-13T19:00Z", "status": "STATUS_FINAL", "homeTeam": { "abbr": "SRB", "name": "Serbia", "logo": "", "friendId": "f3", "friendName": "Ana", "friendColour": "#7570b3" }, "awayTeam": { "abbr": "SUI", "name": "Switzerland", "logo": "", "friendId": "f2", "friendName": "Lee", "friendColour": "#d95f02" }, "score": { "home": 1, "away": 1 }, "venue": "Stadium", "city": "City" },
+      { "id": "A5", "stage": "GROUP_STAGE", "group": "A", "utcDate": "2026-06-14T16:00Z", "status": "STATUS_FINAL", "homeTeam": { "abbr": "SRB", "name": "Serbia", "logo": "", "friendId": "f3", "friendName": "Ana", "friendColour": "#7570b3" }, "awayTeam": { "abbr": "CMR", "name": "Cameroon", "logo": "", "friendId": "f4", "friendName": "Mo", "friendColour": "#e7298a" }, "score": { "home": 2, "away": 1 }, "venue": "Stadium", "city": "City" },
+      { "id": "A6", "stage": "GROUP_STAGE", "group": "A", "utcDate": "2026-06-14T19:00Z", "status": "STATUS_FINAL", "homeTeam": { "abbr": "SUI", "name": "Switzerland", "logo": "", "friendId": "f2", "friendName": "Lee", "friendColour": "#d95f02" }, "awayTeam": { "abbr": "CMR", "name": "Cameroon", "logo": "", "friendId": "f4", "friendName": "Mo", "friendColour": "#e7298a" }, "score": { "home": 1, "away": 0 }, "venue": "Stadium", "city": "City" },
+      { "id": "B1", "stage": "GROUP_STAGE", "group": "B", "utcDate": "2026-06-12T22:00Z", "status": "STATUS_FINAL", "homeTeam": { "abbr": "ARG", "name": "Argentina", "logo": "", "friendId": "f1", "friendName": "Sam", "friendColour": "#1b9e77" }, "awayTeam": { "abbr": "MEX", "name": "Mexico", "logo": "", "friendId": "f2", "friendName": "Lee", "friendColour": "#d95f02" }, "score": { "home": 2, "away": 0 }, "venue": "Stadium", "city": "City" },
+      { "id": "B2", "stage": "GROUP_STAGE", "group": "B", "utcDate": "2026-06-13T22:00Z", "status": "STATUS_FINAL", "homeTeam": { "abbr": "ARG", "name": "Argentina", "logo": "", "friendId": "f1", "friendName": "Sam", "friendColour": "#1b9e77" }, "awayTeam": { "abbr": "KSA", "name": "Saudi Arabia", "logo": "", "friendId": "f4", "friendName": "Mo", "friendColour": "#e7298a" }, "score": { "home": 2, "away": 0 }, "venue": "Stadium", "city": "City" },
+      { "id": "B3", "stage": "GROUP_STAGE", "group": "B", "utcDate": "2026-06-14T22:00Z", "status": "STATUS_FINAL", "homeTeam": { "abbr": "MEX", "name": "Mexico", "logo": "", "friendId": "f2", "friendName": "Lee", "friendColour": "#d95f02" }, "awayTeam": { "abbr": "POL", "name": "Poland", "logo": "", "friendId": "f3", "friendName": "Ana", "friendColour": "#7570b3" }, "score": { "home": 2, "away": 1 }, "venue": "Stadium", "city": "City" },
+      { "id": "B4", "stage": "GROUP_STAGE", "group": "B", "utcDate": "2026-06-18T22:00Z", "status": "STATUS_SCHEDULED", "homeTeam": { "abbr": "ARG", "name": "Argentina", "logo": "", "friendId": "f1", "friendName": "Sam", "friendColour": "#1b9e77" }, "awayTeam": { "abbr": "POL", "name": "Poland", "logo": "", "friendId": "f3", "friendName": "Ana", "friendColour": "#7570b3" }, "score": { "home": null, "away": null }, "venue": "Stadium", "city": "City" },
+      { "id": "B5", "stage": "GROUP_STAGE", "group": "B", "utcDate": "2026-06-18T22:00Z", "status": "STATUS_SCHEDULED", "homeTeam": { "abbr": "MEX", "name": "Mexico", "logo": "", "friendId": "f2", "friendName": "Lee", "friendColour": "#d95f02" }, "awayTeam": { "abbr": "KSA", "name": "Saudi Arabia", "logo": "", "friendId": "f4", "friendName": "Mo", "friendColour": "#e7298a" }, "score": { "home": null, "away": null }, "venue": "Stadium", "city": "City" },
+      { "id": "B6", "stage": "GROUP_STAGE", "group": "B", "utcDate": "2026-06-22T22:00Z", "status": "STATUS_SCHEDULED", "homeTeam": { "abbr": "POL", "name": "Poland", "logo": "", "friendId": "f3", "friendName": "Ana", "friendColour": "#7570b3" }, "awayTeam": { "abbr": "KSA", "name": "Saudi Arabia", "logo": "", "friendId": "f4", "friendName": "Mo", "friendColour": "#e7298a" }, "score": { "home": null, "away": null }, "venue": "Stadium", "city": "City" }
+    ]
+  }
+}
