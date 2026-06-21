@@ -11,6 +11,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "tsc --noEmit",
     "test": "vitest run",
+    "test:acceptance": "vitest run src/acceptance.test.ts",
     "report": "tsx spikes/report.ts",
     "sim": "tsx src/cli.ts"
   },

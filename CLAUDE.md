@@ -83,6 +83,12 @@ npx tsx src/eval/calibrate.ts   # re-run the calibration backtest (needs data/re
 npm run report      # prints the spike demo findings
 ```
 
-`.claude/harness.json` binds `lint`/`typecheck` to these npm scripts, so the global
-`gate-ci` Stop hook runs them automatically. Keep the suite green. `gate-verify`/`perf` keys
-are unset (no bootable app yet); add them when the engine and CLI exist.
+`.claude/harness.json` binds `lint`/`typecheck` to these npm scripts (and the harness
+auto-detects `test: npm test`), so the global `gate-ci` Stop hook runs lint + typecheck + the
+full suite automatically. Keep it green.
+
+An **end-to-end acceptance test** ([src/acceptance.test.ts](src/acceptance.test.ts),
+`npm run test:acceptance`) runs the whole pipeline on the committed real snapshot and spawns
+the actual CLI — it's part of `npm test`, so `gate-ci` enforces the boot-and-verify role for
+this CLI. `gate-verify`/`gate-perf` proper stay unset: they require a bootable HTTP server,
+which this CLI/library doesn't have.
