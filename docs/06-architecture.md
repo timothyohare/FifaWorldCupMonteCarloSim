@@ -148,7 +148,7 @@ green):
 | Calibration backtest | [`src/eval/`](../src/eval/) | ✅ C3 gate passes |
 | Gen-AI narrator | [`src/narrate/`](../src/narrate/) | ✅ live (Anthropic) + number guardrail |
 | CLI | [`src/cli.ts`](../src/cli.ts) | ✅ shows winner + runner-up |
-| ClaudeAdapterModel (precomputed kickpool predictions) | — | ⏳ not yet built |
+| ClaudeAdapterModel (precomputed kickpool predictions) | [`src/model/claude-adapter.ts`](../src/model/claude-adapter.ts) | ✅ `--model claude` (Elo/Poisson fallback for unpredicted pairings) |
 
 The bracket now follows the official Regulations exactly. The generic placeholder seeding in
 `knockout.ts` remains only for non-12-group test tournaments. The live provider has been run

@@ -1,0 +1,45 @@
+name: Daily title odds
+
+# Capture title odds once a day and commit the dated result to history/ so we can watch the
+# numbers move as the tournament progresses. Manual runs allowed via the Actions tab.
+on:
+  schedule:
+    - cron: "0 7 * * *" # 07:00 UTC daily — after late (Americas) match days finish
+  workflow_dispatch: {}
+
+permissions:
+  contents: write # commit the daily result back to the repo
+
+concurrency:
+  group: daily-odds
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Run daily simulation
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: npx tsx scripts/run-daily.ts
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add history fixtures/wc2026-snapshot.json fixtures/wc2026-ratings.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore(odds): daily update $(date -u +%F)"
+            git push
+          fi

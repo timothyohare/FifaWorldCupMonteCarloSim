@@ -2,9 +2,8 @@
 
 Status legend: `[ ]` not started · `[~]` in progress · `[x]` done · `[?]` blocked / needs decision
 
-This TODO covers the **planning stage only**. No production code is written until the
-planning artifacts below are reviewed and the open questions in
-[`docs/09-open-questions.md`](docs/09-open-questions.md) are resolved.
+Planning is complete and implementation is well underway — a working, calibrated engine runs
+the real 2026 tournament end-to-end (see §6). Remaining items are tracked at the bottom of §6.
 
 ## 0. Discovery
 - [x] Locate the existing standings source (`kickpool`, Next.js + ESPN `fifa.world` API).
@@ -14,13 +13,13 @@ planning artifacts below are reviewed and the open questions in
       32-team knockout incl. 8 best third-placed). → confirmed, [`docs/12-rules-sources.md`](docs/12-rules-sources.md) Q2.
 - [x] Confirm FIFA group tiebreaker ordering to implement exactly. → confirmed (H2H-first,
       7-step), [`docs/12-rules-sources.md`](docs/12-rules-sources.md) Q3.
-- [ ] Extract the exact third-place→bracket-slot allocation table from the FIFA Regulations
-      PDF and commit it as a fixture (spike S6).
+- [x] Extract the exact third-place→bracket-slot allocation table from the FIFA Regulations
+      PDF → [`src/engine/annex-c.ts`](src/engine/annex-c.ts) (495 rows, validated; see §6).
 
 ## 1. Method selection (decide before building)
 - [x] Write method comparison: Monte Carlo vs 2 alternatives — [`docs/01-method-comparison.md`](docs/01-method-comparison.md).
 - [x] Evaluate the "too many variables / too much compute" concern explicitly.
-- [ ] Sign-off: confirm Monte Carlo is the chosen method (recommendation: **yes**).
+- [x] Sign-off: Monte Carlo confirmed — the calibrated engine beats the coin-flip baseline.
 
 ## 2. Product definition
 - [x] PRFAQ — [`docs/02-prfaq.md`](docs/02-prfaq.md).
@@ -47,10 +46,8 @@ planning artifacts below are reviewed and the open questions in
 - [x] Decide run target for v1. → **local CLI; AWS = Phase 2** (Q-infra RESOLVED).
 - [x] Decide implementation language. → **hybrid: TypeScript engine + Python calibration** (Q4).
 - [x] Run the knockout-draw-resolution spike (Q5 / S1). → **adopt two-stage** resolver.
-- [ ] Transcribe the official FIFA third-place→R32 Annex table into the S6 mechanism (only
-      remaining hard data gap before `KnockoutEngine` is trustworthy).
-- [ ] Calibrate strength-model constants on historical data via the S8 harness (Elo→λ,
-      shootout tilt) and confirm the engine beats the coin-flip baseline (the C3 gate).
+- [x] Transcribe the official FIFA Annex C table → [`src/engine/annex-c.ts`](src/engine/annex-c.ts) (see §6).
+- [x] Calibrate strength-model constants via the S8 harness → beats coin-flip by 18.6% (see §6).
 
 ## 6. Implementation (started — test-first)
 - [x] Engine: standings + FIFA Art. 13 tiebreakers — [`src/engine/standings.ts`](src/engine/standings.ts).
@@ -72,8 +69,19 @@ planning artifacts below are reviewed and the open questions in
       [`scripts/build-ratings.ts`](scripts/build-ratings.ts) → [`fixtures/wc2026-*.json`](fixtures/).
 - [x] Live Gen-AI narrator (S7) — [`src/narrate/`](src/narrate/) (real Anthropic call + guardrail).
 - [x] CLI shows winner + runner-up — `npm run sim -- --snapshot fixtures/wc2026-snapshot.json --ratings fixtures/wc2026-ratings.json`.
-- [ ] ClaudeAdapterModel (precomputed kickpool predictions as a selectable model).
-- [ ] Run against kickpool's own server once on Node ≥20.9 (provider is ready).
+- [x] Daily odds tracker — [`scripts/run-daily.ts`](scripts/run-daily.ts) +
+      [`.github/workflows/daily-odds.yml`](.github/workflows/daily-odds.yml); captures to
+      [`history/`](history/) (per-day JSON + `champion-odds.csv` time-series + daily AI note).
+- [x] Reusable data modules (TDD) — ESPN provider [`src/io/espn-provider.ts`](src/io/espn-provider.ts),
+      ratings [`src/eval/team-ratings.ts`](src/eval/team-ratings.ts), history [`src/history/record.ts`](src/history/record.ts).
+- [x] kickpool display plan — [`docs/11-kickpool-integration.md`](docs/11-kickpool-integration.md) §7.
+- [x] Verified live against kickpool's own server (Node 24) via the provider.
+- [ ] Set the `ANTHROPIC_API_KEY` repo secret so the daily note works in CI.
+- [ ] Condition the sim on knockout results once the bracket is underway (currently
+      re-simulates the knockout from qualifiers each run).
+- [x] ClaudeAdapterModel — [`src/model/claude-adapter.ts`](src/model/claude-adapter.ts);
+      `--model claude --predictions <file>`, Elo/Poisson fallback for unpredicted pairings.
+      Satisfies PRD FR13 / G5 (≥2 strength models).
 
 ## Exit criteria for the planning stage
 1. Method comparison reviewed and Monte Carlo confirmed (or an alternative chosen).

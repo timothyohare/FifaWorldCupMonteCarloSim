@@ -37,7 +37,9 @@ transcribed **Annex C** 495-scenario table) → **champion & runner-up odds** �
 - `docs/` — numbered design documents (`01`–`13`); read order in [docs/README.md](docs/README.md).
 - `spikes/` — runnable throwaway spikes (TypeScript); see [spikes/README.md](spikes/README.md).
 - `data/` — external datasets (gitignored CSVs); provenance in [data/README.md](data/README.md).
-- `fixtures/` — sample snapshot + ratings for the CLI.
+- `fixtures/` — committed snapshots + ratings (`wc2026-*` = the real tournament).
+- `history/` — daily odds captures (`<date>.json`, `champion-odds.csv`, `latest.json`),
+  written by `scripts/run-daily.ts` via the `.github/workflows/daily-odds.yml` cron.
 - `TODO.md` — checklist and status.
 - Root `README.md` / `CLAUDE.md` — project overview and this file.
 - **kickpool** (`../kickpool`, i.e. `/home/timohare/dev/newdev/kickpool`) — the existing

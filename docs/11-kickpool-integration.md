@@ -82,7 +82,61 @@ None of these add v1 scope beyond good hygiene; they just avoid a rewrite later.
 - Writing odds back into kickpool's prediction/scoring logic; this is a **read-only display**
   surface.
 
-## 7. Open items specific to Phase 2
+## 7. Display plan (concrete — now that daily history exists)
+
+The daily tracker ([`../scripts/run-daily.ts`](../scripts/run-daily.ts) +
+[`daily-odds.yml`](../.github/workflows/daily-odds.yml)) already produces exactly the
+artifacts a kickpool view needs, committed to [`../history/`](../history/):
+
+- `history/latest.json` — today's full per-team odds (champion / runner-up / final / semi /
+  escape + margins of error) and the "what changed" narrative.
+- `history/<date>.json` — the same, per day (the archive).
+- `history/champion-odds.csv` — long-format time-series (`date,team,group,champion,…`) — the
+  spine of the "odds over time" chart.
+
+### 7.1 Data flow into kickpool
+
+These files live in this repo, refreshed daily by Actions. Three ways kickpool can read them,
+cheapest first:
+
+- **(A) Fetch the committed raw files** from this repo (raw GitHub URL or a tiny
+  `kickpool/app/api/odds/route.ts` that proxies + caches them). Zero coupling, no sim code in
+  kickpool, updates automatically when the cron commits. **Recommended start.**
+- **(B) Vendor at build time** — a kickpool build step copies `history/` in (or a git
+  submodule). Simple, but a stale build = stale odds.
+- **(C) Shared store** — the cron also writes to S3/KV that kickpool reads. Only worth it if
+  kickpool moves off committed files (ties into option C of §4).
+
+### 7.2 The `/odds` page (three panels)
+
+| Panel | Source | What it shows |
+|-------|--------|---------------|
+| **Title-odds board** (hero) | `latest.json` | Ranked horizontal bars: each team's champion % with its margin-of-error whisker; team colours/logos from kickpool. The headline "who's favourite". |
+| **Odds over time** | `champion-odds.csv` | Multi-line chart of champion % per day — "watch the favourite emerge". Default to the top ~8 teams + a picker; this is the payoff of capturing daily history. |
+| **Stage breakdown** (per team) | `latest.json` | On row click/expand: champion / final / semi / escape-group bars for that team — the *shape* of its run, not just the trophy number. |
+
+Plus a small **"what changed today"** card rendered from `latest.json.narrative`, and a
+`generatedAt` / `snapshotHash` footnote so the numbers are auditable.
+
+### 7.3 kickpool-side pieces
+
+- Route: `kickpool/app/odds/page.tsx` (server component; reads via the §7.1 source).
+- Components: `kickpool/components/odds/` — `TitleOddsBoard`, `OddsOverTime`, `StageBreakdown`,
+  `WhatChangedCard`. Reuse kickpool's existing chart stack + the "friends" palette.
+- Join key: `team` is the ESPN abbreviation, identical to kickpool's `TeamRef.abbr` — no
+  mapping table needed (the design rule in §2/§5 paying off).
+- Nav: add an **Odds** tab beside `groups` / `leaderboard` / `predictions` (P2-3).
+
+### 7.4 Suggested build order
+
+1. `/api/odds` proxy + the **Title-odds board** from `latest.json` (smallest useful slice).
+2. **Odds over time** line chart from `champion-odds.csv`.
+3. **Stage breakdown** expansion + the **what-changed** card.
+4. Personalisation ("my friends' teams") — Phase 3.
+
+A spike's worth of work for panel 1; the data contract is already stable and live.
+
+## 8. Open items specific to Phase 2
 
 - **P2-1.** Sim package distribution: monorepo/workspace with kickpool, a published private
   package, or a git submodule? Decide when Phase 2 starts.

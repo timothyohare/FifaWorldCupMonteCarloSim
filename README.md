@@ -75,13 +75,34 @@ The simulator is reproducible: identical `(snapshot, ratings, seed, sims)` ⇒ i
 | Path | Role |
 |------|------|
 | [src/domain/](src/domain/) | Core types + deterministic RNG |
-| [src/model/](src/model/) | `StrengthModel` seam + calibrated `EloPoissonModel` |
+| [src/model/](src/model/) | `StrengthModel` seam + calibrated `EloPoissonModel` + `ClaudeAdapterModel` (`--model claude`) |
 | [src/engine/](src/engine/) | standings/tiebreakers, group engine, **2026 bracket (Annex C)**, full-tournament runner |
 | [src/eval/](src/eval/) | Elo ratings, backtest, calibration (the C3 gate) |
 | [src/io/](src/io/) | kickpool snapshot adapter + **live API provider** |
 | [src/narrate/](src/narrate/) | post-run Gen-AI narrator + guardrail |
 | [src/cli.ts](src/cli.ts) | command-line entry point |
 | [scripts/](scripts/) | data capture (snapshot, ratings), Annex C generator, narrator demo |
+
+## Daily odds tracker
+
+A GitHub Actions workflow ([.github/workflows/daily-odds.yml](.github/workflows/daily-odds.yml))
+runs once a day (07:00 UTC) and commits the result to [history/](history/), so you can watch
+the odds move as the tournament unfolds. Each run ([scripts/run-daily.ts](scripts/run-daily.ts)):
+
+1. refreshes the historical results dataset and **recomputes Elo** (ratings evolve with the
+   tournament),
+2. pulls the live ESPN snapshot and runs 100k simulations,
+3. writes `history/<date>.json` (full per-team odds + run metadata + snapshot hash),
+4. appends to `history/champion-odds.csv` (long-format time-series for plotting), and
+5. if `ANTHROPIC_API_KEY` is set, adds a one-paragraph **"what changed since yesterday"** note.
+
+Run it locally for a given day with `npx tsx scripts/run-daily.ts 2026-06-21`. The job needs
+an `ANTHROPIC_API_KEY` repo secret for the daily note (it's skipped gracefully without one).
+
+> Note: the simulation conditions on the **group-stage** standings; once the knockouts begin,
+> it re-simulates the bracket from the actual qualifiers but does not yet condition on knockout
+> results already played. See [docs/11-kickpool-integration.md](docs/11-kickpool-integration.md)
+> for the plan to surface this history inside kickpool.
 
 ## Documentation
 

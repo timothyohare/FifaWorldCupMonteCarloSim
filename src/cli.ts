@@ -2,10 +2,13 @@
 // Usage:
 //   tsx src/cli.ts --snapshot fixtures/sample-snapshot.json [--ratings f.json]
 //                  [--sims 100000] [--seed 1] [--best-thirds 8] [--home-adv 0]
+//                  [--model elo|claude] [--predictions preds.json]
 import { readFileSync } from "node:fs";
 import { EloPoissonModel } from "./model/elo-poisson";
+import { ClaudeAdapterModel, buildPredictionIndex, type KickpoolPrediction } from "./model/claude-adapter";
 import { runTournament } from "./engine/tournament";
 import { fromKickpoolSnapshot, type KickpoolSnapshot } from "./io/snapshot";
+import type { StrengthModel } from "./model/strength-model";
 import type { TeamId } from "./domain/types";
 
 interface Args {
@@ -15,10 +18,12 @@ interface Args {
   seed: number;
   bestThirds: number;
   homeAdv: number;
+  model: "elo" | "claude";
+  predictions?: string;
 }
 
 function parseArgs(argv: string[]): Args {
-  const a: Args = { sims: 100_000, seed: 1, bestThirds: 8, homeAdv: 0 };
+  const a: Args = { sims: 100_000, seed: 1, bestThirds: 8, homeAdv: 0, model: "elo" };
   for (let i = 0; i < argv.length; i++) {
     const next = () => argv[++i];
     switch (argv[i]) {
@@ -28,10 +33,18 @@ function parseArgs(argv: string[]): Args {
       case "--seed": a.seed = Number(next()); break;
       case "--best-thirds": a.bestThirds = Number(next()); break;
       case "--home-adv": a.homeAdv = Number(next()); break;
+      case "--model": {
+        const m = next();
+        if (m !== "elo" && m !== "claude") throw new Error(`--model must be elo|claude, got ${m}`);
+        a.model = m;
+        break;
+      }
+      case "--predictions": a.predictions = next(); break;
       default: throw new Error(`unknown argument: ${argv[i]}`);
     }
   }
   if (!a.snapshot) throw new Error("missing required --snapshot <path>");
+  if (a.model === "claude" && !a.predictions) throw new Error("--model claude requires --predictions <path>");
   return a;
 }
 
@@ -60,13 +73,24 @@ function main(): void {
   const snapshot = JSON.parse(readFileSync(args.snapshot!, "utf8")) as KickpoolSnapshot;
   const input = fromKickpoolSnapshot(snapshot, { bestThirds: args.bestThirds });
   const teamIds = input.groups.flatMap((g) => g.teams.map((t) => t.id));
-  const model = new EloPoissonModel(loadRatings(args.ratings, teamIds), { homeAdvantage: args.homeAdv });
+  const elo = new EloPoissonModel(loadRatings(args.ratings, teamIds), { homeAdvantage: args.homeAdv });
+
+  // The Claude adapter uses precomputed per-match predictions where available and falls back
+  // to Elo/Poisson for everything else (knockout ties, unpredicted fixtures).
+  let model: StrengthModel = elo;
+  if (args.model === "claude") {
+    const preds = JSON.parse(readFileSync(args.predictions!, "utf8")) as KickpoolPrediction[];
+    const fixtures = snapshot.fixtures.matches.map((m) => ({ id: m.id, home: m.homeTeam.abbr, away: m.awayTeam.abbr }));
+    const index = buildPredictionIndex(preds, fixtures);
+    process.stderr.write(`using Claude predictions for ${index.size}/${fixtures.length} fixtures (Elo fallback elsewhere)\n`);
+    model = new ClaudeAdapterModel(index, elo);
+  }
 
   const started = performance.now();
   const rs = runTournament(input, model, { sims: args.sims, seed: args.seed });
   const ms = performance.now() - started;
 
-  console.log(`\nWorld Cup — title odds  (${args.sims.toLocaleString()} sims, seed ${args.seed}, ${rs.metadata.bracket} bracket)\n`);
+  console.log(`\nWorld Cup — title odds  (${args.sims.toLocaleString()} sims, seed ${args.seed}, ${args.model} model, ${rs.metadata.bracket} bracket)\n`);
   console.log("  #  Team   Grp    Champion      Runner-up    Final    Semi   Escape");
   console.log("  ──────────────────────────────────────────────────────────────────────");
   rs.teams.forEach((t, i) => {
