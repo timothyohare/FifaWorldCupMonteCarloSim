@@ -542,7 +542,7 @@
         ]
       }
     ],
-    "lastUpdated": "2026-06-21T02:24:41.701Z"
+    "lastUpdated": "2026-06-22T11:06:58.865Z"
   },
   "fixtures": {
     "matches": [
@@ -1566,7 +1566,7 @@
         "stage": "GROUP_STAGE",
         "group": "F",
         "utcDate": "2026-06-21T04:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "TUN",
           "name": "Tunisia",
@@ -1584,8 +1584,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 4
         },
         "venue": "Estadio BBVA",
         "city": ""
@@ -1595,7 +1595,7 @@
         "stage": "GROUP_STAGE",
         "group": "H",
         "utcDate": "2026-06-21T16:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "ESP",
           "name": "Spain",
@@ -1613,8 +1613,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 4,
+          "away": 0
         },
         "venue": "Mercedes-Benz Stadium",
         "city": ""
@@ -1624,7 +1624,7 @@
         "stage": "GROUP_STAGE",
         "group": "G",
         "utcDate": "2026-06-21T19:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "BEL",
           "name": "Belgium",
@@ -1642,8 +1642,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "venue": "SoFi Stadium",
         "city": ""
@@ -1653,7 +1653,7 @@
         "stage": "GROUP_STAGE",
         "group": "H",
         "utcDate": "2026-06-21T22:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "URU",
           "name": "Uruguay",
@@ -1671,8 +1671,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 2
         },
         "venue": "Hard Rock Stadium",
         "city": ""
@@ -1682,7 +1682,7 @@
         "stage": "GROUP_STAGE",
         "group": "G",
         "utcDate": "2026-06-22T01:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "NZL",
           "name": "New Zealand",
@@ -1700,8 +1700,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 3
         },
         "venue": "BC Place",
         "city": ""
@@ -2635,6 +2635,6 @@
         "city": ""
       }
     ],
-    "lastUpdated": "2026-06-21T02:24:41.701Z"
+    "lastUpdated": "2026-06-22T11:06:58.865Z"
   }
 }
