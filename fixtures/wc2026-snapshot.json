@@ -542,7 +542,7 @@
         ]
       }
     ],
-    "lastUpdated": "2026-06-22T12:44:12.978Z"
+    "lastUpdated": "2026-06-23T10:29:31.034Z"
   },
   "fixtures": {
     "matches": [
@@ -1711,7 +1711,7 @@
         "stage": "GROUP_STAGE",
         "group": "J",
         "utcDate": "2026-06-22T17:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "ARG",
           "name": "Argentina",
@@ -1729,8 +1729,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 0
         },
         "venue": "AT&T Stadium",
         "city": ""
@@ -1740,7 +1740,7 @@
         "stage": "GROUP_STAGE",
         "group": "I",
         "utcDate": "2026-06-22T21:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "FRA",
           "name": "France",
@@ -1758,8 +1758,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 0
         },
         "venue": "Lincoln Financial Field",
         "city": ""
@@ -1769,7 +1769,7 @@
         "stage": "GROUP_STAGE",
         "group": "I",
         "utcDate": "2026-06-23T00:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "NOR",
           "name": "Norway",
@@ -1787,8 +1787,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 2
         },
         "venue": "MetLife Stadium",
         "city": ""
@@ -1798,7 +1798,7 @@
         "stage": "GROUP_STAGE",
         "group": "J",
         "utcDate": "2026-06-23T03:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "JOR",
           "name": "Jordan",
@@ -1816,8 +1816,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 2
         },
         "venue": "Levi's Stadium",
         "city": ""
@@ -2635,6 +2635,6 @@
         "city": ""
       }
     ],
-    "lastUpdated": "2026-06-22T12:44:12.978Z"
+    "lastUpdated": "2026-06-23T10:29:31.034Z"
   }
 }
