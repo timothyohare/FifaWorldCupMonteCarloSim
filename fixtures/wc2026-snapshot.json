@@ -542,7 +542,7 @@
         ]
       }
     ],
-    "lastUpdated": "2026-06-23T10:29:31.034Z"
+    "lastUpdated": "2026-06-24T10:14:26.412Z"
   },
   "fixtures": {
     "matches": [
@@ -1827,7 +1827,7 @@
         "stage": "GROUP_STAGE",
         "group": "K",
         "utcDate": "2026-06-23T17:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "POR",
           "name": "Portugal",
@@ -1845,8 +1845,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 5,
+          "away": 0
         },
         "venue": "NRG Stadium",
         "city": ""
@@ -1856,7 +1856,7 @@
         "stage": "GROUP_STAGE",
         "group": "L",
         "utcDate": "2026-06-23T20:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "ENG",
           "name": "England",
@@ -1874,8 +1874,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "venue": "Gillette Stadium",
         "city": ""
@@ -1885,7 +1885,7 @@
         "stage": "GROUP_STAGE",
         "group": "L",
         "utcDate": "2026-06-23T23:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "PAN",
           "name": "Panama",
@@ -1903,8 +1903,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "venue": "BMO Field",
         "city": ""
@@ -1914,7 +1914,7 @@
         "stage": "GROUP_STAGE",
         "group": "K",
         "utcDate": "2026-06-24T02:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "COL",
           "name": "Colombia",
@@ -1932,8 +1932,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "venue": "Estadio Akron",
         "city": ""
@@ -2635,6 +2635,6 @@
         "city": ""
       }
     ],
-    "lastUpdated": "2026-06-23T10:29:31.034Z"
+    "lastUpdated": "2026-06-24T10:14:26.412Z"
   }
 }
