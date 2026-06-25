@@ -542,7 +542,7 @@
         ]
       }
     ],
-    "lastUpdated": "2026-06-24T10:14:26.412Z"
+    "lastUpdated": "2026-06-25T10:11:53.684Z"
   },
   "fixtures": {
     "matches": [
@@ -1943,7 +1943,7 @@
         "stage": "GROUP_STAGE",
         "group": "B",
         "utcDate": "2026-06-24T19:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "BIH",
           "name": "Bosnia-Herzegovina",
@@ -1961,8 +1961,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 1
         },
         "venue": "Lumen Field",
         "city": ""
@@ -1972,7 +1972,7 @@
         "stage": "GROUP_STAGE",
         "group": "B",
         "utcDate": "2026-06-24T19:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "SUI",
           "name": "Switzerland",
@@ -1990,8 +1990,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "venue": "BC Place",
         "city": ""
@@ -2001,7 +2001,7 @@
         "stage": "GROUP_STAGE",
         "group": "C",
         "utcDate": "2026-06-24T22:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "MAR",
           "name": "Morocco",
@@ -2019,8 +2019,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 4,
+          "away": 2
         },
         "venue": "Mercedes-Benz Stadium",
         "city": ""
@@ -2030,7 +2030,7 @@
         "stage": "GROUP_STAGE",
         "group": "C",
         "utcDate": "2026-06-24T22:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "SCO",
           "name": "Scotland",
@@ -2048,8 +2048,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 3
         },
         "venue": "Hard Rock Stadium",
         "city": ""
@@ -2059,7 +2059,7 @@
         "stage": "GROUP_STAGE",
         "group": "A",
         "utcDate": "2026-06-25T01:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "CZE",
           "name": "Czechia",
@@ -2077,8 +2077,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 3
         },
         "venue": "Estadio Banorte",
         "city": ""
@@ -2088,7 +2088,7 @@
         "stage": "GROUP_STAGE",
         "group": "A",
         "utcDate": "2026-06-25T01:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "RSA",
           "name": "South Africa",
@@ -2106,8 +2106,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "venue": "Estadio BBVA",
         "city": ""
@@ -2635,6 +2635,6 @@
         "city": ""
       }
     ],
-    "lastUpdated": "2026-06-24T10:14:26.412Z"
+    "lastUpdated": "2026-06-25T10:11:53.684Z"
   }
 }
