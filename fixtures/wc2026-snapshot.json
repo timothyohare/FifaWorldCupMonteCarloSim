@@ -542,7 +542,7 @@
         ]
       }
     ],
-    "lastUpdated": "2026-06-26T10:15:43.827Z"
+    "lastUpdated": "2026-06-27T09:23:57.203Z"
   },
   "fixtures": {
     "matches": [
@@ -2291,7 +2291,7 @@
         "stage": "GROUP_STAGE",
         "group": "I",
         "utcDate": "2026-06-26T19:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "NOR",
           "name": "Norway",
@@ -2309,8 +2309,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 4
         },
         "venue": "Gillette Stadium",
         "city": ""
@@ -2320,7 +2320,7 @@
         "stage": "GROUP_STAGE",
         "group": "I",
         "utcDate": "2026-06-26T19:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "SEN",
           "name": "Senegal",
@@ -2338,8 +2338,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 5,
+          "away": 0
         },
         "venue": "BMO Field",
         "city": ""
@@ -2349,7 +2349,7 @@
         "stage": "GROUP_STAGE",
         "group": "H",
         "utcDate": "2026-06-27T00:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "CPV",
           "name": "Cape Verde",
@@ -2367,8 +2367,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "venue": "NRG Stadium",
         "city": ""
@@ -2378,7 +2378,7 @@
         "stage": "GROUP_STAGE",
         "group": "H",
         "utcDate": "2026-06-27T00:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "URU",
           "name": "Uruguay",
@@ -2396,8 +2396,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "venue": "Estadio Akron",
         "city": ""
@@ -2407,7 +2407,7 @@
         "stage": "GROUP_STAGE",
         "group": "G",
         "utcDate": "2026-06-27T03:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "EGY",
           "name": "Egypt",
@@ -2425,8 +2425,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "venue": "Lumen Field",
         "city": ""
@@ -2436,7 +2436,7 @@
         "stage": "GROUP_STAGE",
         "group": "G",
         "utcDate": "2026-06-27T03:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "NZL",
           "name": "New Zealand",
@@ -2454,8 +2454,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 5
         },
         "venue": "BC Place",
         "city": ""
@@ -2635,6 +2635,6 @@
         "city": ""
       }
     ],
-    "lastUpdated": "2026-06-26T10:15:43.827Z"
+    "lastUpdated": "2026-06-27T09:23:57.203Z"
   }
 }
