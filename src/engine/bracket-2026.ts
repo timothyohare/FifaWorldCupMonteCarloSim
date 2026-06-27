@@ -2,10 +2,29 @@
 // §12.6–12.11) plus the Annex C third-placed allocation. Replaces the placeholder seeding
 // for the genuine 12-group / 32-qualifier format.
 import type { Rng } from "../domain/rng";
-import type { TeamId, TableRow } from "../domain/types";
+import type { TeamId, TableRow, MatchResult } from "../domain/types";
 import type { StrengthModel } from "../model/strength-model";
 import type { GroupResult } from "./group-engine";
 import { resolveMatch } from "./knockout";
+
+/** Order-independent key for a knockout tie between two teams. */
+export function pairKey(a: TeamId, b: TeamId): string {
+  return a < b ? `${a}|${b}` : `${b}|${a}`;
+}
+
+/**
+ * Index played knockout ties by team pair → winner, so the simulation can condition on results
+ * already on the board. A level score has no derivable winner (the shootout isn't in the goals),
+ * so it is skipped and that tie falls back to being simulated.
+ */
+export function decidedWinners(played: readonly MatchResult[]): Map<string, TeamId> {
+  const decided = new Map<string, TeamId>();
+  for (const m of played) {
+    if (m.homeGoals > m.awayGoals) decided.set(pairKey(m.home, m.away), m.home);
+    else if (m.homeGoals < m.awayGoals) decided.set(pairKey(m.home, m.away), m.away);
+  }
+  return decided;
+}
 
 type Slot = { winner: string } | { runner: string } | { third: string };
 
@@ -102,18 +121,27 @@ export interface WorldCupKnockoutResult {
   semifinalists: TeamId[];
 }
 
-/** Play the full bracket from the R32 matchups through the fixed tree to the final. */
+/**
+ * Play the full bracket from the R32 matchups through the fixed tree to the final.
+ * `decided` (from {@link decidedWinners}) pins any tie that has already been played, so the run
+ * conditions on real results and only simulates what is still to come.
+ */
 export function playWorldCupKnockout(
   bracket: WorldCupBracket,
   model: StrengthModel,
   rng: Rng,
+  decided?: ReadonlyMap<string, TeamId>,
 ): WorldCupKnockoutResult {
+  const resolve = (home: TeamId, away: TeamId): TeamId => {
+    const known = decided?.get(pairKey(home, away));
+    return known === home || known === away ? known : resolveMatch(model, home, away, rng);
+  };
   const winnerOf = new Map<number, TeamId>();
   for (const m of bracket.matchups) {
-    winnerOf.set(m.match, resolveMatch(model, m.home, m.away, rng));
+    winnerOf.set(m.match, resolve(m.home, m.away));
   }
   for (const g of TREE) {
-    winnerOf.set(g.match, resolveMatch(model, winnerOf.get(g.a)!, winnerOf.get(g.b)!, rng));
+    winnerOf.set(g.match, resolve(winnerOf.get(g.a)!, winnerOf.get(g.b)!));
   }
   return {
     champion: winnerOf.get(104)!,

@@ -76,9 +76,16 @@ the real 2026 tournament end-to-end (see §6). Remaining items are tracked at th
       ratings [`src/eval/team-ratings.ts`](src/eval/team-ratings.ts), history [`src/history/record.ts`](src/history/record.ts).
 - [x] kickpool display plan — [`docs/11-kickpool-integration.md`](docs/11-kickpool-integration.md) §7.
 - [x] Verified live against kickpool's own server (Node 24) via the provider.
-- [ ] Set the `ANTHROPIC_API_KEY` repo secret so the daily note works in CI.
-- [ ] Condition the sim on knockout results once the bracket is underway (currently
-      re-simulates the knockout from qualifiers each run).
+- [x] Set the `ANTHROPIC_API_KEY` repo secret so the daily note works in CI (set 2026-06-22).
+      No local cronjob needed — the schedule is GitHub-hosted via
+      [`.github/workflows/daily-odds.yml`](.github/workflows/daily-odds.yml) (`cron: 0 7 * * *`).
+- [x] Condition the sim on knockout results once the bracket is underway —
+      [`bracket-2026.ts`](src/engine/bracket-2026.ts) `decidedWinners`/`playWorldCupKnockout(…, decided)`
+      pin any played tie (keyed on the team pair); [`snapshot.ts`](src/io/snapshot.ts) now reads
+      cross-group FINAL results into `TournamentInput.knockout` instead of crashing on them.
+- [x] Call out teams that can no longer reach the last 32 —
+      [`elimination.ts`](src/engine/elimination.ts) (sound, points-only top-3 reachability);
+      surfaced per-team (`eliminated`) and as a CLI summary line.
 - [x] ClaudeAdapterModel — [`src/model/claude-adapter.ts`](src/model/claude-adapter.ts);
       `--model claude --predictions <file>`, Elo/Poisson fallback for unpredicted pairings.
       Satisfies PRD FR13 / G5 (≥2 strength models).

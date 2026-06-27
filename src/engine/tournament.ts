@@ -7,7 +7,8 @@ import type { TeamId } from "../domain/types";
 import { completeGroup, selectQualifiers } from "./group-engine";
 import { playKnockout, seedBracket } from "./knockout";
 import { ANNEX_C } from "./annex-c";
-import { buildWorldCupBracket, playWorldCupKnockout } from "./bracket-2026";
+import { buildWorldCupBracket, playWorldCupKnockout, decidedWinners } from "./bracket-2026";
+import { eliminatedTeams } from "./elimination";
 import type { RunMetadata, RunOptions, TournamentInput } from "./simulate";
 import type { StrengthModel } from "../model/strength-model";
 
@@ -21,6 +22,8 @@ export interface TeamFullProbs {
   escapeGroup: number;
   championMoE: number;
   runnerUpMoE: number;
+  /** True when the team is mathematically out of the running for the last 32. */
+  eliminated: boolean;
 }
 
 export interface FullResultSet {
@@ -56,6 +59,8 @@ export function runTournament(input: TournamentInput, model: StrengthModel, opts
   const bestThirds = input.bestThirds ?? 8;
   const useFifa = isWorldCup(input);
   const rng = mulberry32(opts.seed);
+  const decided = input.knockout?.length ? decidedWinners(input.knockout) : undefined;
+  const eliminated = eliminatedTeams(input);
 
   const groupOf = new Map<TeamId, string>();
   const counts = new Map<TeamId, Counts>();
@@ -67,7 +72,7 @@ export function runTournament(input: TournamentInput, model: StrengthModel, opts
   }
 
   for (let s = 0; s < opts.sims; s++) {
-    const out = simulateOnce(input, model, rng, bestThirds, useFifa, groupOf);
+    const out = simulateOnce(input, model, rng, bestThirds, useFifa, groupOf, decided);
     for (const team of out.escaped) counts.get(team)!.escapeGroup += 1;
     for (const team of out.semifinalists) counts.get(team)!.reachSemi += 1;
     for (const team of out.finalists) {
@@ -94,6 +99,7 @@ export function runTournament(input: TournamentInput, model: StrengthModel, opts
       escapeGroup: c.escapeGroup / n,
       championMoE: moe(c.champion),
       runnerUpMoE: moe(c.runnerUp),
+      eliminated: eliminated.has(team),
     }))
     .sort((a, b) => b.champion - a.champion || b.reachFinal - a.reachFinal || a.team.localeCompare(b.team));
 
@@ -107,13 +113,14 @@ function simulateOnce(
   bestThirds: number,
   useFifa: boolean,
   groupOf: ReadonlyMap<TeamId, string>,
+  decided: ReadonlyMap<string, TeamId> | undefined,
 ): SimOutcome {
   const results = input.groups.map((g) => completeGroup(g, model, rng));
   const q = selectQualifiers(results, { bestThirds });
   const escaped = [...q.winners, ...q.runnersUp, ...q.bestThirds];
 
   if (useFifa) {
-    const ko = playWorldCupKnockout(buildWorldCupBracket(results, ANNEX_C), model, rng);
+    const ko = playWorldCupKnockout(buildWorldCupBracket(results, ANNEX_C), model, rng, decided);
     return { champion: ko.champion, finalists: ko.finalists, semifinalists: ko.semifinalists, escaped };
   }
 

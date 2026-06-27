@@ -101,8 +101,14 @@ function main(): void {
     const fin = pct(t.reachFinal).padStart(7);
     const semi = pct(t.reachSemi).padStart(7);
     const esc = pct(t.escapeGroup).padStart(7);
-    console.log(`  ${rank}  ${team}   ${t.group}   ${champ}   ${run}  ${fin}  ${semi}  ${esc}`);
+    const flag = t.eliminated ? "  ✗ out" : "";
+    console.log(`  ${rank}  ${team}   ${t.group}   ${champ}   ${run}  ${fin}  ${semi}  ${esc}${flag}`);
   });
+
+  const out = rs.teams.filter((t) => t.eliminated).map((t) => t.team);
+  if (out.length) {
+    console.log(`\n  ✗ eliminated — cannot reach the last 32 (${out.length}): ${out.join(", ")}`);
+  }
   console.log(`\n  ${rs.teams.length} teams · best-${rs.metadata.bestThirds} thirds advance · ${ms.toFixed(0)}ms\n`);
 }
 

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { buildWorldCupBracket, playWorldCupKnockout } from "./bracket-2026";
+import { buildWorldCupBracket, playWorldCupKnockout, decidedWinners } from "./bracket-2026";
 import { ANNEX_C } from "./annex-c";
 import { EloPoissonModel } from "../model/elo-poisson";
 import { mulberry32 } from "../domain/rng";
@@ -97,5 +97,33 @@ describe("playWorldCupKnockout", () => {
       if (playWorldCupKnockout(buildWorldCupBracket(res, ANNEX_C), model, rng).champion === "A1") favTitles += 1;
     }
     expect(favTitles / N).toBeGreaterThan(0.3); // far above the 1/32 a random team would get
+  });
+
+  it("honours a decided knockout tie instead of re-simulating it", () => {
+    // A1 is the runaway favourite, so without conditioning it almost never loses its R32 tie.
+    const model = new EloPoissonModel(ratings("A1"), { homeAdvantage: 0 });
+    const bracket = buildWorldCupBracket(res, ANNEX_C);
+    const a1Tie = bracket.matchups.find((m) => m.home === "A1" || m.away === "A1")!;
+    const opponent = a1Tie.home === "A1" ? a1Tie.away : a1Tie.home;
+    // Force the *actual* result: the underdog knocked A1 out in regulation.
+    const decided = decidedWinners([
+      { home: a1Tie.home, away: a1Tie.away, homeGoals: opponent === a1Tie.home ? 1 : 0, awayGoals: opponent === a1Tie.away ? 1 : 0 },
+    ]);
+    for (let i = 0; i < 200; i++) {
+      const ko = playWorldCupKnockout(bracket, model, mulberry32(i), decided);
+      expect(ko.champion).not.toBe("A1"); // eliminated in the round of 32, every time
+    }
+  });
+});
+
+describe("decidedWinners", () => {
+  it("maps a played tie to its winner regardless of home/away order", () => {
+    const d = decidedWinners([{ home: "X", away: "Y", homeGoals: 0, awayGoals: 2 }]);
+    expect(d.get("X|Y")).toBe("Y");
+  });
+
+  it("ignores a level score (winner not derivable from goals alone)", () => {
+    const d = decidedWinners([{ home: "X", away: "Y", homeGoals: 1, awayGoals: 1 }]);
+    expect(d.size).toBe(0);
   });
 });

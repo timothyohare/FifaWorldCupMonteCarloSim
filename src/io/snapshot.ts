@@ -33,29 +33,44 @@ export function fromKickpoolSnapshot(
   });
 
   const byLetter = new Map(groups.map((g) => [g.group, g]));
+  const knockout: MatchResult[] = [];
 
   for (const mt of snapshot.fixtures.matches) {
     const home = mt.homeTeam.abbr;
     const away = mt.awayTeam.abbr;
-    // Skip non-group fixtures. Some sources (e.g. kickpool) label every match GROUP_STAGE and
-    // include knockout fixtures with placeholder teams ("2A", "W73"); a real group match always
-    // has both teams in a group's standings, so membership — not the stage label — is the test.
-    if (mt.stage !== "GROUP_STAGE" || !membership.has(home) || !membership.has(away)) continue;
-    const groupLetter = mt.group ?? membership.get(home)!;
-    if (membership.get(home) !== groupLetter || membership.get(away) !== groupLetter) {
-      throw new SnapshotError(`Match ${mt.id}: declared group ${mt.group} disagrees with standings`);
-    }
-    const target = byLetter.get(groupLetter)!;
+    const homeGroup = membership.get(home);
+    const awayGroup = membership.get(away);
+    // Skip fixtures with a placeholder slot. Some sources (e.g. kickpool) label every match
+    // GROUP_STAGE and carry knockout fixtures against unresolved opponents ("2A", "W73"); until
+    // both teams are real, there is nothing to record.
+    if (homeGroup === undefined || awayGroup === undefined) continue;
+
     const played = mt.status === "STATUS_FINAL";
     const hasScore = mt.score.home !== null && mt.score.away !== null;
+
+    if (homeGroup !== awayGroup) {
+      // Two real teams from different groups can only be a knockout tie. Record decided ones so
+      // the simulation can condition on them; ignore those still to be played (the bracket is
+      // derived from the group results, not from kickpool's provisional knockout fixtures).
+      if (played) {
+        if (!hasScore) throw new SnapshotError(`Match ${mt.id} is FINAL but missing a score`);
+        knockout.push({ home, away, homeGoals: mt.score.home!, awayGoals: mt.score.away! });
+      }
+      continue;
+    }
+
+    // Same group → a group-stage fixture. A declared group, if present, must agree.
+    if (mt.group && mt.group !== homeGroup) {
+      throw new SnapshotError(`Match ${mt.id}: declared group ${mt.group} disagrees with standings`);
+    }
+    const target = byLetter.get(homeGroup)!;
     if (played) {
       if (!hasScore) throw new SnapshotError(`Match ${mt.id} is FINAL but missing a score`);
-      const result: MatchResult = { home, away, homeGoals: mt.score.home!, awayGoals: mt.score.away! };
-      target.played.push(result);
+      target.played.push({ home, away, homeGoals: mt.score.home!, awayGoals: mt.score.away! });
     } else {
       target.remaining.push({ home, away });
     }
   }
 
-  return { groups, bestThirds: opts.bestThirds };
+  return { groups, bestThirds: opts.bestThirds, knockout };
 }

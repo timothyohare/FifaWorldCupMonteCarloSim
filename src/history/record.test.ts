@@ -12,6 +12,7 @@ const team = (t: string, champ: number): TeamFullProbs => ({
   escapeGroup: 0.9,
   championMoE: 0.002,
   runnerUpMoE: 0.002,
+  eliminated: false,
 });
 
 describe("history/record", () => {

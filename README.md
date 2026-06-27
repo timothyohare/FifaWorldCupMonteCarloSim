@@ -99,10 +99,39 @@ the odds move as the tournament unfolds. Each run ([scripts/run-daily.ts](script
 Run it locally for a given day with `npx tsx scripts/run-daily.ts 2026-06-21`. The job needs
 an `ANTHROPIC_API_KEY` repo secret for the daily note (it's skipped gracefully without one).
 
-> Note: the simulation conditions on the **group-stage** standings; once the knockouts begin,
-> it re-simulates the bracket from the actual qualifiers but does not yet condition on knockout
-> results already played. See [docs/11-kickpool-integration.md](docs/11-kickpool-integration.md)
-> for the plan to surface this history inside kickpool.
+Trigger the hosted run on demand (instead of waiting for 07:00 UTC) with:
+
+```bash
+gh workflow run daily-odds.yml
+```
+
+### Seeing the daily odds
+
+The numbers are committed back to [history/](history/), so just read them from the repo:
+
+- **Latest snapshot** — [`history/latest.json`](history/latest.json) (or the dated
+  `history/<date>.json`): full per-team odds + run metadata.
+- **Time-series across days** — [`history/champion-odds.csv`](history/champion-odds.csv):
+  long-format (`date,team,…`), ready to plot how each team's odds move over the tournament.
+- After a manual trigger, watch progress with `gh run watch` (or `gh run list --workflow daily-odds.yml`);
+  once it finishes, `git pull` to get the new `history/` files.
+
+> Note: the simulation **conditions on results already played** at both stages — completed group
+> matches fix the standings, and a knockout tie that has been played pins that result instead of
+> being re-simulated (the rest of the bracket still plays out). See
+> [docs/11-kickpool-integration.md](docs/11-kickpool-integration.md) for the plan to surface this
+> history inside kickpool.
+
+### Knockout stage & elimination
+
+- **Knockout conditioning** — once the bracket is underway, played ties are read from the snapshot
+  (cross-group FINAL results → `TournamentInput.knockout`) and pinned by team pair, so the odds
+  reflect who has actually gone through. Only the matches still to come are simulated.
+- **Eliminated teams** — the CLI flags every side that is *mathematically* out of the running for
+  the last 32 (`✗ out`), computed independently of the Monte Carlo by
+  [src/engine/elimination.ts](src/engine/elimination.ts): a sound, points-only check that never
+  flags a team with a surviving path. (Teams that can still finish 3rd but realistically won't
+  qualify simply show ~0.0% escape in the table.)
 
 ## Documentation
 

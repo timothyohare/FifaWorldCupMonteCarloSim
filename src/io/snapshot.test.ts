@@ -60,4 +60,29 @@ describe("fromKickpoolSnapshot", () => {
     bad.fixtures.matches[0].score = { home: null, away: null };
     expect(() => fromKickpoolSnapshot(bad)).toThrow();
   });
+
+  it("collects a played knockout result (two real teams from different groups)", () => {
+    const twoGroups: KickpoolSnapshot = {
+      standings: {
+        lastUpdated: "",
+        groups: [
+          { group: "A", table: [{ team: team("BRA") }, { team: team("SUI") }, { team: team("SRB") }, { team: team("CMR") }] },
+          { group: "B", table: [{ team: team("ARG") }, { team: team("MEX") }, { team: team("POL") }, { team: team("KSA") }] },
+        ],
+      },
+      fixtures: {
+        lastUpdated: "",
+        matches: [
+          // A knockout tie between a Group A team and a Group B team, already decided.
+          { ...match("K1", "", "BRA", "ARG", 2, 1), stage: "ROUND_OF_32" },
+          // A knockout fixture still to a placeholder opponent — ignored, not a crash.
+          { ...match("K2", "", "BRA", "2C", null, null), stage: "ROUND_OF_32" },
+        ],
+      },
+    };
+    const input = fromKickpoolSnapshot(twoGroups);
+    expect(input.knockout).toEqual([{ home: "BRA", away: "ARG", homeGoals: 2, awayGoals: 1 }]);
+    // The cross-group result must not leak into any group's played list.
+    expect(input.groups.every((g) => g.played.length === 0)).toBe(true);
+  });
 });
