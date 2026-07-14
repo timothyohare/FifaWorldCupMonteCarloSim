@@ -39,7 +39,12 @@ transcribed **Annex C** 495-scenario table) → **champion & runner-up odds** �
 - `data/` — external datasets (gitignored CSVs); provenance in [data/README.md](data/README.md).
 - `fixtures/` — committed snapshots + ratings (`wc2026-*` = the real tournament).
 - `history/` — daily odds captures (`<date>.json`, `champion-odds.csv`, `latest.json`),
-  written by `scripts/run-daily.ts` via the `.github/workflows/daily-odds.yml` cron.
+  written by `scripts/run-daily.ts` via the `.github/workflows/daily-odds.yml` cron
+  (runs until the final on 2026-07-19; disable with `gh workflow disable` after), plus
+  `forecast-vs-reality.md` — the post-tournament verification report from
+  `npm run report:forecast` (`src/eval/forecast-report.ts`), which scores every capture
+  against realised outcomes (`fixtures/wc2026-outcomes.json` + the final snapshot).
+  Update the outcomes fixture after the final and re-run to settle the champion market.
 - `TODO.md` — checklist and status.
 - Root `README.md` / `CLAUDE.md` — project overview and this file.
 - **kickpool** (`../kickpool`, i.e. `/home/timohare/dev/newdev/kickpool`) — the existing

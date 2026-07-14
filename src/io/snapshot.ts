@@ -34,8 +34,13 @@ export function fromKickpoolSnapshot(
 
   const byLetter = new Map(groups.map((g) => [g.group, g]));
   const knockout: MatchResult[] = [];
+  const seenPairings = new Set<string>(); // same-group pairs already recorded as group fixtures
+  const pairKey = (a: string, b: string) => [a, b].sort().join("|");
 
-  for (const mt of snapshot.fixtures.matches) {
+  // Date order guarantees a pair's group meeting is seen before any knockout rematch.
+  const ordered = [...snapshot.fixtures.matches].sort((a, b) => a.utcDate.localeCompare(b.utcDate));
+
+  for (const mt of ordered) {
     const home = mt.homeTeam.abbr;
     const away = mt.awayTeam.abbr;
     const homeGroup = membership.get(home);
@@ -59,7 +64,20 @@ export function fromKickpoolSnapshot(
       continue;
     }
 
-    // Same group → a group-stage fixture. A declared group, if present, must agree.
+    // Same group → usually a group-stage fixture, but same-group teams meet at most once
+    // in the group: a second meeting can only be a knockout tie (possible from the
+    // quarter-finals onwards in the 2026 format). Record it if decided, else ignore it —
+    // like cross-group ties, the future bracket is derived from group results.
+    if (seenPairings.has(pairKey(home, away))) {
+      if (played) {
+        if (!hasScore) throw new SnapshotError(`Match ${mt.id} is FINAL but missing a score`);
+        knockout.push({ home, away, homeGoals: mt.score.home!, awayGoals: mt.score.away! });
+      }
+      continue;
+    }
+    seenPairings.add(pairKey(home, away));
+
+    // A declared group, if present, must agree.
     if (mt.group && mt.group !== homeGroup) {
       throw new SnapshotError(`Match ${mt.id}: declared group ${mt.group} disagrees with standings`);
     }

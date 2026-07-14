@@ -85,4 +85,31 @@ describe("fromKickpoolSnapshot", () => {
     // The cross-group result must not leak into any group's played list.
     expect(input.groups.every((g) => g.played.length === 0)).toBe(true);
   });
+
+  it("treats a decided rematch of a same-group pairing as a knockout tie", () => {
+    // Same-group teams meet at most once in the group; a second meeting can only be a
+    // knockout round (possible from the quarter-finals onwards in the 2026 format).
+    const rematch = structuredClone(snapshot);
+    rematch.fixtures.matches.push({
+      ...match("K9", "A", "SRB", "BRA", 1, 0),
+      utcDate: "2026-07-10T20:00Z",
+    });
+    const input = fromKickpoolSnapshot(rematch);
+    expect(input.knockout).toEqual([{ home: "SRB", away: "BRA", homeGoals: 1, awayGoals: 0 }]);
+    // The group table still sees exactly the original six fixtures.
+    expect(input.groups[0].played).toHaveLength(2);
+    expect(input.groups[0].remaining).toHaveLength(4);
+  });
+
+  it("ignores an undecided same-group rematch (bracket comes from group results)", () => {
+    const rematch = structuredClone(snapshot);
+    rematch.fixtures.matches.push({
+      ...match("K9", "A", "SRB", "BRA", null, null),
+      utcDate: "2026-07-10T20:00Z",
+    });
+    const input = fromKickpoolSnapshot(rematch);
+    expect(input.knockout).toEqual([]);
+    expect(input.groups[0].played).toHaveLength(2);
+    expect(input.groups[0].remaining).toHaveLength(4);
+  });
 });

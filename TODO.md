@@ -89,6 +89,17 @@ the real 2026 tournament end-to-end (see §6). Remaining items are tracked at th
 - [x] ClaudeAdapterModel — [`src/model/claude-adapter.ts`](src/model/claude-adapter.ts);
       `--model claude --predictions <file>`, Elo/Poisson fallback for unpredicted pairings.
       Satisfies PRD FR13 / G5 (≥2 strength models).
+- [x] Forecast-vs-reality verification — [`src/eval/forecast-verify.ts`](src/eval/forecast-verify.ts)
+      (Brier, skill vs base rate, AUC, permutation test) + report generator
+      [`src/eval/forecast-report.ts`](src/eval/forecast-report.ts) (`npm run report:forecast`)
+      scoring every daily capture against realised outcomes
+      ([`fixtures/wc2026-outcomes.json`](fixtures/wc2026-outcomes.json)) →
+      [`history/forecast-vs-reality.md`](history/forecast-vs-reality.md). The snapshot adapter
+      now also classifies decided same-group **rematches** as knockout ties (QF onwards).
+- [ ] After the final (2026-07-19): fill `finalists`/`champion`/`runnerUp` into
+      [`fixtures/wc2026-outcomes.json`](fixtures/wc2026-outcomes.json), re-run
+      `npm run report:forecast` to settle the champion market, and disable the daily cron
+      (`gh workflow disable "Daily title odds"`).
 
 ## Exit criteria for the planning stage
 1. Method comparison reviewed and Monte Carlo confirmed (or an alternative chosen).

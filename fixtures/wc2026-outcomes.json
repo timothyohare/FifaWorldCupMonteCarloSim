@@ -1,0 +1,9 @@
+{
+  "asOf": "2026-07-14",
+  "note": "Realised knockout outcomes for scoring the daily forecasts (src/eval/forecast-report.ts). Group qualifiers are derived from wc2026-snapshot.json, not recorded here. Fill in finalists/champion/runnerUp after those matches are played and re-run the report.",
+  "quarterFinalists": ["FRA", "ESP", "ENG", "ARG", "MAR", "BEL", "NOR", "SUI"],
+  "semiFinalists": ["FRA", "ESP", "ENG", "ARG"],
+  "finalists": null,
+  "champion": null,
+  "runnerUp": null
+}
