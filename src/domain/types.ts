@@ -15,6 +15,9 @@ export interface MatchResult {
   away: TeamId;
   homeGoals: number;
   awayGoals: number;
+  /** Penalty-shootout scores, present only when a level knockout tie was decided on penalties. */
+  shootoutHome?: number;
+  shootoutAway?: number;
 }
 
 /** A fully-ranked group-standings row. `position` is 1-based after tiebreakers. */

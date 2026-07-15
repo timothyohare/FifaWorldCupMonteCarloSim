@@ -25,7 +25,13 @@ export interface KpMatch {
   status: MatchStatus;
   homeTeam: KpTeamRef;
   awayTeam: KpTeamRef;
-  score: { home: number | null; away: number | null };
+  score: {
+    home: number | null;
+    away: number | null;
+    /** Penalty-shootout scores, present only when a knockout tie was decided on penalties. */
+    shootoutHome?: number | null;
+    shootoutAway?: number | null;
+  };
   venue: string;
   city: string;
 }

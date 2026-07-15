@@ -126,4 +126,11 @@ describe("decidedWinners", () => {
     const d = decidedWinners([{ home: "X", away: "Y", homeGoals: 1, awayGoals: 1 }]);
     expect(d.size).toBe(0);
   });
+
+  it("resolves a level score via the penalty shootout when one is recorded", () => {
+    const d = decidedWinners([
+      { home: "X", away: "Y", homeGoals: 1, awayGoals: 1, shootoutHome: 3, shootoutAway: 4 },
+    ]);
+    expect(d.get("X|Y")).toBe("Y");
+  });
 });

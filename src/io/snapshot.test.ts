@@ -86,6 +86,49 @@ describe("fromKickpoolSnapshot", () => {
     expect(input.groups.every((g) => g.played.length === 0)).toBe(true);
   });
 
+  it("carries a penalty shootout through to the knockout result", () => {
+    const twoGroups: KickpoolSnapshot = {
+      standings: {
+        lastUpdated: "",
+        groups: [
+          { group: "A", table: [{ team: team("BRA") }, { team: team("SUI") }, { team: team("SRB") }, { team: team("CMR") }] },
+          { group: "B", table: [{ team: team("ARG") }, { team: team("MEX") }, { team: team("POL") }, { team: team("KSA") }] },
+        ],
+      },
+      fixtures: {
+        lastUpdated: "",
+        matches: [
+          {
+            ...match("K1", "", "BRA", "ARG", 1, 1),
+            stage: "SEMI_FINAL",
+            score: { home: 1, away: 1, shootoutHome: 3, shootoutAway: 4 },
+          },
+        ],
+      },
+    };
+    const input = fromKickpoolSnapshot(twoGroups);
+    expect(input.knockout).toEqual([
+      { home: "BRA", away: "ARG", homeGoals: 1, awayGoals: 1, shootoutHome: 3, shootoutAway: 4 },
+    ]);
+  });
+
+  it("fails loudly on a level knockout tie with no shootout (no winner derivable)", () => {
+    const twoGroups: KickpoolSnapshot = {
+      standings: {
+        lastUpdated: "",
+        groups: [
+          { group: "A", table: [{ team: team("BRA") }, { team: team("SUI") }, { team: team("SRB") }, { team: team("CMR") }] },
+          { group: "B", table: [{ team: team("ARG") }, { team: team("MEX") }, { team: team("POL") }, { team: team("KSA") }] },
+        ],
+      },
+      fixtures: {
+        lastUpdated: "",
+        matches: [{ ...match("K1", "", "BRA", "ARG", 1, 1), stage: "SEMI_FINAL" }],
+      },
+    };
+    expect(() => fromKickpoolSnapshot(twoGroups)).toThrow(/shootout/i);
+  });
+
   it("treats a decided rematch of a same-group pairing as a knockout tie", () => {
     // Same-group teams meet at most once in the group; a second meeting can only be a
     // knockout round (possible from the quarter-finals onwards in the 2026 format).

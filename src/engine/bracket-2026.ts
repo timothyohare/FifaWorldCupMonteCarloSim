@@ -14,14 +14,17 @@ export function pairKey(a: TeamId, b: TeamId): string {
 
 /**
  * Index played knockout ties by team pair → winner, so the simulation can condition on results
- * already on the board. A level score has no derivable winner (the shootout isn't in the goals),
- * so it is skipped and that tie falls back to being simulated.
+ * already on the board. A level score resolves via the penalty shootout when one is recorded;
+ * without one there is no derivable winner, so the tie falls back to being simulated.
  */
 export function decidedWinners(played: readonly MatchResult[]): Map<string, TeamId> {
   const decided = new Map<string, TeamId>();
   for (const m of played) {
     if (m.homeGoals > m.awayGoals) decided.set(pairKey(m.home, m.away), m.home);
     else if (m.homeGoals < m.awayGoals) decided.set(pairKey(m.home, m.away), m.away);
+    else if (m.shootoutHome !== undefined && m.shootoutAway !== undefined && m.shootoutHome !== m.shootoutAway) {
+      decided.set(pairKey(m.home, m.away), m.shootoutHome > m.shootoutAway ? m.home : m.away);
+    }
   }
   return decided;
 }

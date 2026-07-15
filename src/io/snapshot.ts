@@ -4,7 +4,7 @@
 import type { GroupInput } from "../engine/group-engine";
 import type { TournamentInput } from "../engine/simulate";
 import type { MatchResult } from "../domain/types";
-import type { KpFixturesResponse, KpStandingsResponse } from "./kickpool-types";
+import type { KpFixturesResponse, KpMatch, KpStandingsResponse } from "./kickpool-types";
 
 export interface KickpoolSnapshot {
   standings: KpStandingsResponse;
@@ -34,6 +34,23 @@ export function fromKickpoolSnapshot(
 
   const byLetter = new Map(groups.map((g) => [g.group, g]));
   const knockout: MatchResult[] = [];
+
+  // A decided knockout tie must yield a winner: carry the shootout through when present, and
+  // fail loudly on a level score without one (the simulation could not pin the tie).
+  const knockoutResult = (mt: KpMatch, home: string, away: string): MatchResult => {
+    if (mt.score.home === null || mt.score.away === null) {
+      throw new SnapshotError(`Match ${mt.id} is FINAL but missing a score`);
+    }
+    const result: MatchResult = { home, away, homeGoals: mt.score.home, awayGoals: mt.score.away };
+    const { shootoutHome, shootoutAway } = mt.score;
+    if (shootoutHome != null && shootoutAway != null) {
+      result.shootoutHome = shootoutHome;
+      result.shootoutAway = shootoutAway;
+    } else if (result.homeGoals === result.awayGoals) {
+      throw new SnapshotError(`Match ${mt.id} is a level knockout tie with no shootout result`);
+    }
+    return result;
+  };
   const seenPairings = new Set<string>(); // same-group pairs already recorded as group fixtures
   const pairKey = (a: string, b: string) => [a, b].sort().join("|");
 
@@ -57,10 +74,7 @@ export function fromKickpoolSnapshot(
       // Two real teams from different groups can only be a knockout tie. Record decided ones so
       // the simulation can condition on them; ignore those still to be played (the bracket is
       // derived from the group results, not from kickpool's provisional knockout fixtures).
-      if (played) {
-        if (!hasScore) throw new SnapshotError(`Match ${mt.id} is FINAL but missing a score`);
-        knockout.push({ home, away, homeGoals: mt.score.home!, awayGoals: mt.score.away! });
-      }
+      if (played) knockout.push(knockoutResult(mt, home, away));
       continue;
     }
 
@@ -69,10 +83,7 @@ export function fromKickpoolSnapshot(
     // quarter-finals onwards in the 2026 format). Record it if decided, else ignore it —
     // like cross-group ties, the future bracket is derived from group results.
     if (seenPairings.has(pairKey(home, away))) {
-      if (played) {
-        if (!hasScore) throw new SnapshotError(`Match ${mt.id} is FINAL but missing a score`);
-        knockout.push({ home, away, homeGoals: mt.score.home!, awayGoals: mt.score.away! });
-      }
+      if (played) knockout.push(knockoutResult(mt, home, away));
       continue;
     }
     seenPairings.add(pairKey(home, away));
