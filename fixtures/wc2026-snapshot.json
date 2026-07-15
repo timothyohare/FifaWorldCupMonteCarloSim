@@ -542,7 +542,7 @@
         ]
       }
     ],
-    "lastUpdated": "2026-07-14T09:00:20.668Z"
+    "lastUpdated": "2026-07-15T09:06:37.860Z"
   },
   "fixtures": {
     "matches": [
@@ -2633,8 +2633,944 @@
         },
         "venue": "AT&T Stadium",
         "city": ""
+      },
+      {
+        "id": "760486",
+        "stage": "GROUP_STAGE",
+        "group": "A",
+        "utcDate": "2026-06-28T19:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "RSA",
+          "name": "South Africa",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "CAN",
+          "name": "Canada",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "venue": "SoFi Stadium",
+        "city": ""
+      },
+      {
+        "id": "760487",
+        "stage": "GROUP_STAGE",
+        "group": "C",
+        "utcDate": "2026-06-29T17:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "BRA",
+          "name": "Brazil",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "JPN",
+          "name": "Japan",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "venue": "NRG Stadium",
+        "city": ""
+      },
+      {
+        "id": "760489",
+        "stage": "GROUP_STAGE",
+        "group": "E",
+        "utcDate": "2026-06-29T20:30Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "GER",
+          "name": "Germany",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "PAR",
+          "name": "Paraguay",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 1,
+          "away": 1,
+          "shootoutHome": 3,
+          "shootoutAway": 4
+        },
+        "venue": "Gillette Stadium",
+        "city": ""
+      },
+      {
+        "id": "760488",
+        "stage": "GROUP_STAGE",
+        "group": "F",
+        "utcDate": "2026-06-30T01:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "NED",
+          "name": "Netherlands",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "MAR",
+          "name": "Morocco",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 1,
+          "away": 1,
+          "shootoutHome": 2,
+          "shootoutAway": 3
+        },
+        "venue": "Estadio BBVA",
+        "city": ""
+      },
+      {
+        "id": "760490",
+        "stage": "GROUP_STAGE",
+        "group": "E",
+        "utcDate": "2026-06-30T17:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "CIV",
+          "name": "Ivory Coast",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "NOR",
+          "name": "Norway",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "venue": "AT&T Stadium",
+        "city": ""
+      },
+      {
+        "id": "760492",
+        "stage": "GROUP_STAGE",
+        "group": "I",
+        "utcDate": "2026-06-30T21:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "FRA",
+          "name": "France",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "SWE",
+          "name": "Sweden",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 3,
+          "away": 0
+        },
+        "venue": "MetLife Stadium",
+        "city": ""
+      },
+      {
+        "id": "760491",
+        "stage": "GROUP_STAGE",
+        "group": "A",
+        "utcDate": "2026-07-01T02:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "MEX",
+          "name": "Mexico",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "ECU",
+          "name": "Ecuador",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "venue": "Estadio Banorte",
+        "city": ""
+      },
+      {
+        "id": "760495",
+        "stage": "GROUP_STAGE",
+        "group": "L",
+        "utcDate": "2026-07-01T16:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "ENG",
+          "name": "England",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "COD",
+          "name": "Congo DR",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "venue": "Mercedes-Benz Stadium",
+        "city": ""
+      },
+      {
+        "id": "760493",
+        "stage": "GROUP_STAGE",
+        "group": "G",
+        "utcDate": "2026-07-01T20:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "BEL",
+          "name": "Belgium",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "SEN",
+          "name": "Senegal",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 3,
+          "away": 2
+        },
+        "venue": "Lumen Field",
+        "city": ""
+      },
+      {
+        "id": "760494",
+        "stage": "GROUP_STAGE",
+        "group": "D",
+        "utcDate": "2026-07-02T00:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "USA",
+          "name": "United States",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "BIH",
+          "name": "Bosnia-Herzegovina",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "venue": "Levi's Stadium",
+        "city": ""
+      },
+      {
+        "id": "760497",
+        "stage": "GROUP_STAGE",
+        "group": "H",
+        "utcDate": "2026-07-02T19:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "ESP",
+          "name": "Spain",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "AUT",
+          "name": "Austria",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 3,
+          "away": 0
+        },
+        "venue": "SoFi Stadium",
+        "city": ""
+      },
+      {
+        "id": "760496",
+        "stage": "GROUP_STAGE",
+        "group": "K",
+        "utcDate": "2026-07-02T23:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "POR",
+          "name": "Portugal",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "CRO",
+          "name": "Croatia",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "venue": "BMO Field",
+        "city": ""
+      },
+      {
+        "id": "760498",
+        "stage": "GROUP_STAGE",
+        "group": "B",
+        "utcDate": "2026-07-03T03:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "SUI",
+          "name": "Switzerland",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "ALG",
+          "name": "Algeria",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "venue": "BC Place",
+        "city": ""
+      },
+      {
+        "id": "760499",
+        "stage": "GROUP_STAGE",
+        "group": "D",
+        "utcDate": "2026-07-03T18:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "AUS",
+          "name": "Australia",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "EGY",
+          "name": "Egypt",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 1,
+          "away": 1,
+          "shootoutHome": 2,
+          "shootoutAway": 4
+        },
+        "venue": "AT&T Stadium",
+        "city": ""
+      },
+      {
+        "id": "760500",
+        "stage": "GROUP_STAGE",
+        "group": "J",
+        "utcDate": "2026-07-03T22:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "ARG",
+          "name": "Argentina",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "CPV",
+          "name": "Cape Verde",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 3,
+          "away": 2
+        },
+        "venue": "Hard Rock Stadium",
+        "city": ""
+      },
+      {
+        "id": "760501",
+        "stage": "GROUP_STAGE",
+        "group": "K",
+        "utcDate": "2026-07-04T01:30Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "COL",
+          "name": "Colombia",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "GHA",
+          "name": "Ghana",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 1,
+          "away": 0
+        },
+        "venue": "GEHA Field at Arrowhead Stadium",
+        "city": ""
+      },
+      {
+        "id": "760502",
+        "stage": "GROUP_STAGE",
+        "group": "B",
+        "utcDate": "2026-07-04T17:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "CAN",
+          "name": "Canada",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "MAR",
+          "name": "Morocco",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 0,
+          "away": 3
+        },
+        "venue": "NRG Stadium",
+        "city": ""
+      },
+      {
+        "id": "760503",
+        "stage": "GROUP_STAGE",
+        "group": "D",
+        "utcDate": "2026-07-04T21:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "PAR",
+          "name": "Paraguay",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "FRA",
+          "name": "France",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "venue": "Lincoln Financial Field",
+        "city": ""
+      },
+      {
+        "id": "760504",
+        "stage": "GROUP_STAGE",
+        "group": "C",
+        "utcDate": "2026-07-05T20:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "BRA",
+          "name": "Brazil",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "NOR",
+          "name": "Norway",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "venue": "MetLife Stadium",
+        "city": ""
+      },
+      {
+        "id": "760505",
+        "stage": "GROUP_STAGE",
+        "group": "A",
+        "utcDate": "2026-07-06T01:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "MEX",
+          "name": "Mexico",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "ENG",
+          "name": "England",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 2,
+          "away": 3
+        },
+        "venue": "Estadio Banorte",
+        "city": ""
+      },
+      {
+        "id": "760506",
+        "stage": "GROUP_STAGE",
+        "group": "K",
+        "utcDate": "2026-07-06T19:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "POR",
+          "name": "Portugal",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "ESP",
+          "name": "Spain",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 0,
+          "away": 1
+        },
+        "venue": "AT&T Stadium",
+        "city": ""
+      },
+      {
+        "id": "760507",
+        "stage": "GROUP_STAGE",
+        "group": "D",
+        "utcDate": "2026-07-07T00:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "USA",
+          "name": "United States",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "BEL",
+          "name": "Belgium",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 1,
+          "away": 4
+        },
+        "venue": "Lumen Field",
+        "city": ""
+      },
+      {
+        "id": "760509",
+        "stage": "GROUP_STAGE",
+        "group": "J",
+        "utcDate": "2026-07-07T16:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "ARG",
+          "name": "Argentina",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "EGY",
+          "name": "Egypt",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 3,
+          "away": 2
+        },
+        "venue": "Mercedes-Benz Stadium",
+        "city": ""
+      },
+      {
+        "id": "760508",
+        "stage": "GROUP_STAGE",
+        "group": "B",
+        "utcDate": "2026-07-07T20:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "SUI",
+          "name": "Switzerland",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "COL",
+          "name": "Colombia",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 0,
+          "away": 0,
+          "shootoutHome": 4,
+          "shootoutAway": 3
+        },
+        "venue": "BC Place",
+        "city": ""
+      },
+      {
+        "id": "760510",
+        "stage": "GROUP_STAGE",
+        "group": "I",
+        "utcDate": "2026-07-09T20:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "FRA",
+          "name": "France",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "MAR",
+          "name": "Morocco",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 2,
+          "away": 0
+        },
+        "venue": "Gillette Stadium",
+        "city": ""
+      },
+      {
+        "id": "760511",
+        "stage": "GROUP_STAGE",
+        "group": "H",
+        "utcDate": "2026-07-10T19:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "ESP",
+          "name": "Spain",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "BEL",
+          "name": "Belgium",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 2,
+          "away": 1
+        },
+        "venue": "SoFi Stadium",
+        "city": ""
+      },
+      {
+        "id": "760512",
+        "stage": "GROUP_STAGE",
+        "group": "I",
+        "utcDate": "2026-07-11T21:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "NOR",
+          "name": "Norway",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "ENG",
+          "name": "England",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 1,
+          "away": 2
+        },
+        "venue": "Hard Rock Stadium",
+        "city": ""
+      },
+      {
+        "id": "760513",
+        "stage": "GROUP_STAGE",
+        "group": "J",
+        "utcDate": "2026-07-12T01:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "ARG",
+          "name": "Argentina",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "SUI",
+          "name": "Switzerland",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 3,
+          "away": 1
+        },
+        "venue": "GEHA Field at Arrowhead Stadium",
+        "city": ""
+      },
+      {
+        "id": "760514",
+        "stage": "GROUP_STAGE",
+        "group": "I",
+        "utcDate": "2026-07-14T19:00Z",
+        "status": "STATUS_FINAL",
+        "homeTeam": {
+          "abbr": "FRA",
+          "name": "France",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "ESP",
+          "name": "Spain",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": 0,
+          "away": 2
+        },
+        "venue": "AT&T Stadium",
+        "city": ""
+      },
+      {
+        "id": "760515",
+        "stage": "GROUP_STAGE",
+        "group": "L",
+        "utcDate": "2026-07-15T19:00Z",
+        "status": "STATUS_SCHEDULED",
+        "homeTeam": {
+          "abbr": "ENG",
+          "name": "England",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "ARG",
+          "name": "Argentina",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": null,
+          "away": null
+        },
+        "venue": "Mercedes-Benz Stadium",
+        "city": ""
+      },
+      {
+        "id": "760516",
+        "stage": "GROUP_STAGE",
+        "group": "I",
+        "utcDate": "2026-07-18T21:00Z",
+        "status": "STATUS_SCHEDULED",
+        "homeTeam": {
+          "abbr": "FRA",
+          "name": "France",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "SF L2",
+          "name": "Semifinal 2 Loser",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": null,
+          "away": null
+        },
+        "venue": "Hard Rock Stadium",
+        "city": ""
+      },
+      {
+        "id": "760517",
+        "stage": "GROUP_STAGE",
+        "group": "H",
+        "utcDate": "2026-07-19T19:00Z",
+        "status": "STATUS_SCHEDULED",
+        "homeTeam": {
+          "abbr": "ESP",
+          "name": "Spain",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "awayTeam": {
+          "abbr": "SFW2",
+          "name": "Semifinal 2 Winner",
+          "logo": "",
+          "friendId": "",
+          "friendName": "",
+          "friendColour": "#000000"
+        },
+        "score": {
+          "home": null,
+          "away": null
+        },
+        "venue": "MetLife Stadium",
+        "city": ""
       }
     ],
-    "lastUpdated": "2026-07-14T09:00:20.668Z"
+    "lastUpdated": "2026-07-15T09:06:37.860Z"
   }
 }
