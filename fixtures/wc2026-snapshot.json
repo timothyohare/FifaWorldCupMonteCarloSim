@@ -542,7 +542,7 @@
         ]
       }
     ],
-    "lastUpdated": "2026-07-15T09:06:37.860Z"
+    "lastUpdated": "2026-07-16T09:09:57.258Z"
   },
   "fixtures": {
     "matches": [
@@ -3488,7 +3488,7 @@
         "stage": "GROUP_STAGE",
         "group": "L",
         "utcDate": "2026-07-15T19:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "ENG",
           "name": "England",
@@ -3506,8 +3506,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 2
         },
         "venue": "Mercedes-Benz Stadium",
         "city": ""
@@ -3527,8 +3527,8 @@
           "friendColour": "#000000"
         },
         "awayTeam": {
-          "abbr": "SF L2",
-          "name": "Semifinal 2 Loser",
+          "abbr": "ENG",
+          "name": "England",
           "logo": "",
           "friendId": "",
           "friendName": "",
@@ -3556,8 +3556,8 @@
           "friendColour": "#000000"
         },
         "awayTeam": {
-          "abbr": "SFW2",
-          "name": "Semifinal 2 Winner",
+          "abbr": "ARG",
+          "name": "Argentina",
           "logo": "",
           "friendId": "",
           "friendName": "",
@@ -3571,6 +3571,6 @@
         "city": ""
       }
     ],
-    "lastUpdated": "2026-07-15T09:06:37.860Z"
+    "lastUpdated": "2026-07-16T09:09:57.258Z"
   }
 }
