@@ -542,7 +542,7 @@
         ]
       }
     ],
-    "lastUpdated": "2026-07-18T08:45:48.852Z"
+    "lastUpdated": "2026-07-19T09:02:38.517Z"
   },
   "fixtures": {
     "matches": [
@@ -3517,7 +3517,7 @@
         "stage": "GROUP_STAGE",
         "group": "I",
         "utcDate": "2026-07-18T21:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "FRA",
           "name": "France",
@@ -3535,8 +3535,8 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 4,
+          "away": 6
         },
         "venue": "Hard Rock Stadium",
         "city": ""
@@ -3571,6 +3571,6 @@
         "city": ""
       }
     ],
-    "lastUpdated": "2026-07-18T08:45:48.852Z"
+    "lastUpdated": "2026-07-19T09:02:38.517Z"
   }
 }
