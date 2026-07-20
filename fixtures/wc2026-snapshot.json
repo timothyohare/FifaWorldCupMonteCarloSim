@@ -542,7 +542,7 @@
         ]
       }
     ],
-    "lastUpdated": "2026-07-19T09:02:38.517Z"
+    "lastUpdated": "2026-07-20T09:54:33.515Z"
   },
   "fixtures": {
     "matches": [
@@ -3546,7 +3546,7 @@
         "stage": "GROUP_STAGE",
         "group": "H",
         "utcDate": "2026-07-19T19:00Z",
-        "status": "STATUS_SCHEDULED",
+        "status": "STATUS_FINAL",
         "homeTeam": {
           "abbr": "ESP",
           "name": "Spain",
@@ -3564,13 +3564,13 @@
           "friendColour": "#000000"
         },
         "score": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "venue": "MetLife Stadium",
         "city": ""
       }
     ],
-    "lastUpdated": "2026-07-19T09:02:38.517Z"
+    "lastUpdated": "2026-07-20T09:54:33.515Z"
   }
 }
