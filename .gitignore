@@ -12,3 +12,7 @@ dist/
 # (the official PDF, extracted text, raw ESPN dumps, the 3.6MB results CSV…)
 data/*
 !data/README.md
+
+# Mutation testing (CHG-0034): per-run report + sandbox ignored; incremental history committed
+.stryker-tmp/
+reports/mutation/mutation.json
