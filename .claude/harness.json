@@ -1,4 +1,5 @@
 {
   "lint": "npm run -s lint",
-  "typecheck": "npm run -s typecheck"
+  "typecheck": "npm run -s typecheck",
+  "mutation": "npx stryker run"
 }
